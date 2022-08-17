@@ -1,2 +1,2 @@
 streamlit
-all_movie_people_.db
+
