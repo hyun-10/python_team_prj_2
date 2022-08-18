@@ -2,7 +2,7 @@ import sqlite3
 import streamlit as st
 connect = sqlite3.connect('all_movie_people_.db', isolation_level=None)
 
-
+st.title('영화')
 
 cursor = connect.cursor();
 st.write('영화인검색')
