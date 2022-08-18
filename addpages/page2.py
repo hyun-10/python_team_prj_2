@@ -15,4 +15,4 @@ def app():
       
       st.write(movie_t)
 
-      st.image(imgURL,width=150,)
+      st.image(imgURL,width=300,)
