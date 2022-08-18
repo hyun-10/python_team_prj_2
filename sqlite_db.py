@@ -19,6 +19,6 @@ cursor.execute(quary_string)
 for peopleCd, peopleNmEn ,repRoleNm, imgURL ,filmoNames in cursor:
     st.write(repRoleNm)
     st.image(
-            "imgURL",
+            imgURL,
             width=400, # Manually Adjust the width of the image as per requirement
         )
