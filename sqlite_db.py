@@ -21,4 +21,4 @@ for peopleCd, peopleNmEn ,repRoleNm, peopleNm ,imgURL ,filmoNames,peopleNm  in c
 
     st.write(filmoNames)
     
-    st.image(imgURL,width=400,)
+    st.image(imgURL,width=150,)
