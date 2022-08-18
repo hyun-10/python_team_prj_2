@@ -1,6 +1,6 @@
 import streamlit as st
 
-from pages import pages
+from add_pages import pages
 from pages import psge3 as p3
 
 
