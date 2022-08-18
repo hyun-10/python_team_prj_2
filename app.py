@@ -23,4 +23,4 @@ app.add_page('영화인 정보',p3.app)
 app.add_page('영화추천', p4.app)
 app.add_page('가상 캐스팅', p5.app)
 
-
+app.run()
