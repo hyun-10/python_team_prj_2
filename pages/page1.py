@@ -1,4 +1,4 @@
 import streamlit as st
 
 def app():
-  st.write(page1)
+  st.write('page1')
