@@ -1,5 +1,5 @@
 import sqlite3
-
+import streamlit as st
 connect = sqlite3.connect('all_movie_people_.db', isolation_level=None)
 
 st.write('test1')
