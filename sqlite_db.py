@@ -8,7 +8,7 @@ cursor = connect.cursor();
 
 st.write('영화인 검색')
 input = st.text_input("영화인 ")
-select = """select peopleCd, peopleNmEn ,repRoleNm, filmoNames from all_movie_people_list where peopleNm in ('input')
+select = """select peopleCd, peopleNmEn ,repRoleNm, filmoNames from all_movie_people_list where peopleNm in ('서한교')
 """
 cursor.execute(select)
 for i in cursor:
