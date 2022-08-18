@@ -9,9 +9,9 @@ cursor = connect.cursor();
 
 input = st.text_input("영화인 이름")
 
-quary_string = f"select peopleCd, peopleNmEn ,repRoleNm, filmoNames from all_movie_people_list where peopleNm in ('{input}')"
+quary_string = f"select peopleCd, peopleNmEn ,repRoleNm, imgURL ,filmoNames from movie_people_included_imgURL where peopleNm in ('{input}')"
 
-#cursor.execute("""select peopleCd, peopleNmEn ,repRoleNm, filmoNames from all_movie_people_list where peopleNm in ('input')""")
+
 
 
 cursor.execute(quary_string)
