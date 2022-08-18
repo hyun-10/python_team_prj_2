@@ -1,2 +1,3 @@
 import streamlit as st
-st.write(page5)
+def app():
+  st.write('page5')
