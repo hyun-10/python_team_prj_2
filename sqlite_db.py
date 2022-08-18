@@ -1,6 +1,6 @@
 import sqlite3
 
-connect = sqlite3.connect('C:/all_movie_people_.db', isolation_level=None)
+connect = sqlite3.connect('all_movie_people_.db', isolation_level=None)
 
 
 
