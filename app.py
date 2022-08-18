@@ -1,7 +1,7 @@
 import streamlit as st
 
 
-from pages import psge3 as p3
+
 
 
 
