@@ -18,6 +18,7 @@ cursor.execute(quary_string)
 
 for peopleCd, peopleNmEn ,repRoleNm, peopleNm ,imgURL ,filmoNames,peopleNm  in cursor:
     st.write(peopleNm)
-    st.write(filmoNames)
     st.write(peopleNmEn)
+    st.write(filmoNames)
+    
     st.image(imgURL,width=400,)
