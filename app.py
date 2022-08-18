@@ -8,5 +8,5 @@ app=pagess()
 
 st.title('movie')
 
-app.add_page('영화인정보',p1.app)
+app.add_page('영화인정보',p1.appp)
 
