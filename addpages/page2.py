@@ -1,4 +1,5 @@
 import streamlit as st
+import sqlite3
 st.write('영화정보 조회')
 
 
