@@ -1,5 +1,5 @@
 import streamlit as st
-from add_pages import pages
+from add_pages import pagess
 from pages import pages1 as p1
 from pages import pages2 as p2
 from pages import pages3 as p3
