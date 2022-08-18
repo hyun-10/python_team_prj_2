@@ -9,8 +9,13 @@ cursor = connect.cursor();
 
 input = st.text_input("영화인 이름")
 
+quary_string = f"select peopleCd, peopleNmEn ,repRoleNm, filmoNames from all_movie_people_list where peopleNm in ('{input}')"
 
-cursor.execute("""select peopleCd, peopleNmEn ,repRoleNm, filmoNames from all_movie_people_list where peopleNm in (f{input})""")
+#cursor.execute("""select peopleCd, peopleNmEn ,repRoleNm, filmoNames from all_movie_people_list where peopleNm in ('input')""")
+
+
+cursor.execute(quary_string)
+
 for i in cursor:
     st.write(i)
 
