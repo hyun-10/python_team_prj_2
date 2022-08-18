@@ -1,5 +1,5 @@
 import streamlit as st
-import add_pages
+from add_pages import pages
 
 
 
