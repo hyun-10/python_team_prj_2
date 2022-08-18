@@ -21,6 +21,3 @@ def app():
 
       st.image(imgURL,width=150,)
 
-      st.write(filmoNames)
-
-      st.image(imgURL,width=150,)
