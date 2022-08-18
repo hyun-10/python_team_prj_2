@@ -10,7 +10,7 @@ cursor = connect.cursor();
 input = st.text_input("영화인 이름")
 
 
-cursor.execute("""select peopleCd, peopleNmEn ,repRoleNm, filmoNames from all_movie_people_list where peopleNm in ('이훈')""")
+cursor.execute("""select peopleCd, peopleNmEn ,repRoleNm, filmoNames from all_movie_people_list where peopleNm in (globals()'이훈')""")
 for i in cursor:
     st.write(i)
 
