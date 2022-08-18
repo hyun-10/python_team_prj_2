@@ -3,7 +3,7 @@ st.write('영화정보 조회')
 
 
 def app():
-  connect = sqlite3.connect('movie_url_2000', isolation_level=None)
+  connect = sqlite3.connect('movie_url_2000.db', isolation_level=None)
   cursor = connect.cursor();
   
   input = st.text_input("영화 이름")
