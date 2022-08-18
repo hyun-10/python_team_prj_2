@@ -9,14 +9,14 @@ cursor = connect.cursor();
 
 input = st.text_input("영화인 이름")
 
-quary_string = f"select peopleCd, peopleNmEn ,repRoleNm, imgURL ,filmoNames from movie_people_included_imgURL where peopleNm in ('{input}')"
+quary_string = f"select peopleCd, peopleNmEn ,repRoleNm, peopleNm ,imgURL ,filmoNames from movie_people_included_imgURL where peopleNm in ('{input}')"
 
 
 
 
 cursor.execute(quary_string)
 
-for peopleCd, peopleNmEn ,repRoleNm, imgURL ,filmoNames in cursor:
-    st.wirte(input)
+for peopleCd, peopleNmEn ,repRoleNm, imgURL ,filmoNames ,peopleNm in cursor:
+    st.wirte(peopleNm)
     st.write(repRoleNm)
     st.image(imgURL,width=150)
