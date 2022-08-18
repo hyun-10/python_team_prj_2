@@ -15,7 +15,7 @@ from pages import pages5 as p5
 
 app=pages()
 
-st.title('Movie Project'p1.app)
+st.title('Movie Project',p1.app)
 st.add_page('메인 페이지')
 st.add_page('영화 정보')
 st.add_page('영화인 정보',p3.app)
