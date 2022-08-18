@@ -8,7 +8,7 @@ def app():
   cursor = connect.cursor();
   
   input = st.text_input("영화 이름")
-  quary_string = f"select img_url, movie_t from URL_2000 where movie_t in ('{input}')"
+  quary_string = f"select img_url, movie_t from url_2000 where movie_t in ('{input}')"
   cursor.execute(quary_string)
   for img_url, movie_t in cursor:
 
