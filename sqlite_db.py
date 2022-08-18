@@ -5,7 +5,7 @@ connect = sqlite3.connect('all_movie_people_.db', isolation_level=None)
 st.title('영화')
 
 cursor = connect.cursor();
-st.write('영화인검색')
+
 
 input = st.text_input("영화인 이름")
 a = st.write(input)
