@@ -3,9 +3,15 @@ st.write('영화정보 조회')
 
 
 def app():
-  connect = sqlite3.connect('movie_value_test1.db', isolation_level=None)
+  connect = sqlite3.connect('movie_url_2000', isolation_level=None)
   cursor = connect.cursor();
   
   input = st.text_input("영화 이름")
-  quary_string = f"select peopleCd, peopleNmEn ,repRoleNm, peopleNm ,imgURL ,filmoNames ,peopleNm from movie_people_included_imgURL where peopleNm in ('{input}')"
+  quary_string = f"select img_url, movie_t from url_2000 where movie_t in ('{input}')"
   cursor.execute(quary_string)
+  for img_url, movie_t in cursor:
+
+      
+      st.write(movie_t)
+
+      st.image(imgURL,width=150,)
