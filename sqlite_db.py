@@ -17,8 +17,6 @@ quary_string = f"select peopleCd, peopleNmEn ,repRoleNm, imgURL ,filmoNames from
 cursor.execute(quary_string)
 
 for peopleCd, peopleNmEn ,repRoleNm, imgURL ,filmoNames in cursor:
+    st.wirte(input)
     st.write(repRoleNm)
-    st.image(
-            imgURL,
-            width=400, # Manually Adjust the width of the image as per requirement
-        )
+    st.image(imgURL,width=150)
