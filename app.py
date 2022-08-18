@@ -13,7 +13,7 @@ from pages import pages5 as p5
 
 
 
-app=pages()
+app=pagess()
 
 st.title('Movie Project')
 
