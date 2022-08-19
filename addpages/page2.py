@@ -36,13 +36,13 @@ def app():
   '''
   cols = ["가족", "공연", "공포", "다큐멘터리", "드라마",'멜로','뮤지컬','미스터리','범죄','사극','서부극','성인물','스릴러','서부극','성인물','스릴러','애니메이션','액션','어드벤처','전쟁','코미디','판타지']
   st_ms = st.multiselect( '장르',option = str,default=cols)
-  
+  '''
   
   input = st.text_input("영화 이름")
   quary_string = f"select movieCd, movieNm, prdtYear, showTm, prdtStatNM, nations, family, performance, horror, etc, documentary, drama, melodrama, musical, mystery, crime, historical, western, adult, thriller, animated, action, adventure, war, comedy, fantasy,peopleNm, actors, staffs from movie_list where movieNm in ('{input}')"
   cursor.execute(quary_string)
   for 영화이름 in cursor:
-  '''
+  
       
       st.write(영화이름)
 
