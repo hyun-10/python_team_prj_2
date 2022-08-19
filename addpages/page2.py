@@ -9,7 +9,7 @@ def app():
   
   Category = st.columns(19)
   Data_category = Category[0].checkbox("가족") 
-  
+  family = Data_category
   Data_category1 = Category[1].checkbox("공연") 
   Data_category2 = Category[2].checkbox("공포") 
   
@@ -33,6 +33,8 @@ def app():
   Data_category16 = Category[16].checkbox("전쟁")
   Data_category17 = Category[17].checkbox("코미디")
   Data_category18 = Category[18].checkbox("판타지")
+  
+  
   
   
   input = st.text_input("영화 이름")
