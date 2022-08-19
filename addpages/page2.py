@@ -15,7 +15,7 @@ def app():
   
   Data_category3 = Category[3].checkbox("다큐멘터리") 
   Data_category4 = Category[4].checkbox("드라마")
-  Category = st.columns(5)
+  Category = st.columns(10)
   Data_category5 = Category[5].checkbox("멜로")
  
   Data_category6 = Category[6].checkbox("뮤지컬")
