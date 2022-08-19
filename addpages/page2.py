@@ -8,11 +8,26 @@ def app():
   cursor = connect.cursor();
   
   Category = st.columns(4)
-  Data_category = Category[0].checkbox("코미디") 
-  Data_category1 = Category[1].checkbox("가족") 
-  Data_category2 = Category[2].checkbox("액션") 
-  Data_category3 = Category[3].checkbox("로맨스") 
-  Data_category4 = Category[0].checkbox("") 
+  Data_category = Category[0].checkbox("가족") 
+  Data_category1 = Category[1].checkbox("공연") 
+  Data_category2 = Category[2].checkbox("공포") 
+  Data_category3 = Category[3].checkbox("다큐멘터리") 
+  Data_category4 = Category[0].checkbox("드라마")
+  Data_category4 = Category[0].checkbox("멜로")
+  Data_category4 = Category[0].checkbox("뮤지컬")
+  Data_category4 = Category[0].checkbox("미스터리")
+  Data_category4 = Category[0].checkbox("범죄")
+  Data_category4 = Category[0].checkbox("사극")
+  Data_category4 = Category[0].checkbox("서부극")
+  Data_category4 = Category[0].checkbox("성인물")
+  Data_category4 = Category[0].checkbox("스릴러")
+  Data_category4 = Category[0].checkbox("애니메이션")
+  Data_category4 = Category[0].checkbox("액션")
+  Data_category4 = Category[0].checkbox("어드벤처")
+  Data_category4 = Category[0].checkbox("전쟁")
+  Data_category4 = Category[0].checkbox("코미디")
+  Data_category4 = Category[0].checkbox("판타지")
+  
   
   
   input = st.text_input("영화 이름")
