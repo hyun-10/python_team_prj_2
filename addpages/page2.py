@@ -11,7 +11,8 @@ def app():
   Data_category = Category1[0].checkbox("가족") 
   if Data_category :
       Data_category = cursor.execute("select family from movie_list")
-      st.write(Data_category)
+      for i in Data_category:
+          st.write(i)
   Data_category1 = Category1[1].checkbox("공연") 
   Data_category2 = Category1[2].checkbox("공포") 
   
