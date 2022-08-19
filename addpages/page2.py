@@ -7,7 +7,7 @@ def app():
   connect = sqlite3.connect('reset3.db', isolation_level=None)
   cursor = connect.cursor();
   
-  Category = st.columns(4)
+  Category = st.columns(18)
   Data_category = Category[0].checkbox("가족") 
   Data_category1 = Category[1].checkbox("공연") 
   Data_category2 = Category[2].checkbox("공포") 
@@ -16,7 +16,7 @@ def app():
   Data_category5 = Category[5].checkbox("멜로")
   Data_category6 = Category[6].checkbox("뮤지컬")
   Data_category7 = Category[7].checkbox("미스터리")
-  Data_category8= Category[8].checkbox("범죄")
+  Data_category8 = Category[8].checkbox("범죄")
   Data_category9 = Category[9].checkbox("사극")
   Data_category10 = Category[10].checkbox("서부극")
   Data_category11 = Category[11].checkbox("성인물")
