@@ -4,7 +4,7 @@ st.write('영화정보 조회')
 
 
 def app():
-  connect = sqlite3.connect('/db/reset3.db', isolation_level=None)
+  connect = sqlite3.connect('db/reset3.db', isolation_level=None)
   cursor = connect.cursor();
   
   input = st.text_input("영화 이름")
