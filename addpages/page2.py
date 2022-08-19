@@ -8,7 +8,7 @@ def app():
   cursor = connect.cursor();
   
   input = st.text_input("영화 이름")
-  quary_string = f"select 영화이름 from movie where 영화이름 in ('{input}')"
+  quary_string = f"select movieCd, movieNm, prdtYear, showTm, prdtStaNM, nations, famil, prdtStatNM, nations, family, performance, horror, etc, docuentary, drama, melodrama, musical, mystery, crime, historical, western, adult, thriller, animated, action, adventure, war, comedy, fantasy,peopleNm, actors, staffs from movie where movieNm in ('{input}')"
   cursor.execute(quary_string)
   for 영화이름 in cursor:
 
