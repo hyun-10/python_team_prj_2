@@ -9,8 +9,10 @@ def app():
   
   Category = st.columns(19)
   Data_category = Category[0].checkbox("가족") 
+  
   Data_category1 = Category[1].checkbox("공연") 
   Data_category2 = Category[2].checkbox("공포") 
+  
   Data_category3 = Category[3].checkbox("다큐멘터리") 
   Data_category4 = Category[4].checkbox("드라마")
   Data_category5 = Category[5].checkbox("멜로")
