@@ -34,10 +34,7 @@ def app():
   Data_category17 = Category[2].checkbox("코미디")
   Data_category18 = Category[3].checkbox("판타지")
 
-  '''
-  cols = ["가족", "공연", "공포", "다큐멘터리", "드라마",'멜로','뮤지컬','미스터리','범죄','사극','서부극','성인물','스릴러','서부극','성인물','스릴러','애니메이션','액션','어드벤처','전쟁','코미디','판타지']
-  st_ms = st.multiselect( '장르',option = str,default=cols)
-  '''
+
   
   input = st.text_input("영화 이름")
   
@@ -46,6 +43,6 @@ def app():
   for 영화이름 in cursor:
   
       
-      st.write(영화이름)
+
 
       #st.image(img_url,width=300,)
