@@ -7,7 +7,7 @@ def app():
   connect = sqlite3.connect('reset3.db', isolation_level=None)
   cursor = connect.cursor();
   
-  Category = st.columns(18)
+  Category = st.columns(19)
   Data_category = Category[0].checkbox("가족") 
   Data_category1 = Category[1].checkbox("공연") 
   Data_category2 = Category[2].checkbox("공포") 
