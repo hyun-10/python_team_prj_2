@@ -9,10 +9,7 @@ def app():
   
   Category1 = st.columns(5)
   Data_category = Category1[0].checkbox("가족") 
-  if Data_category :
-      Data_category = cursor.execute("select family from movie_list")
-      for i in Data_category:
-          st.write(i)
+
   Data_category1 = Category1[1].checkbox("공연") 
   Data_category2 = Category1[2].checkbox("공포") 
   
@@ -42,6 +39,11 @@ def app():
   input = st.text_input('')
   
   quary_string = f"select movieCd, movieNm, prdtYear, showTm, prdtStatNM, nations, family, performance, horror, etc, documentary, drama, melodrama, musical, mystery, crime, historical, western, adult, thriller, animated, action, adventure, war, comedy, fantasy,peopleNm, actors, staffs from movie_list where movieNm in ('{input}')"
+  if Data_category :
+      Data_category = cursor.execute("select family from movie_list")
+      for i in Data_category:
+          st.write(i)
+  
   cursor.execute(quary_string)
   for test in cursor:
       st.write(test)
