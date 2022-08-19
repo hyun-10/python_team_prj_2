@@ -33,9 +33,7 @@ def app():
   Data_category16 = Category[16].checkbox("전쟁")
   Data_category17 = Category[17].checkbox("코미디")
   Data_category18 = Category[18].checkbox("판타지")
-  if Data_category1:
-      cursor.execute("select family from movie_list")
-      st.write(cursor)
+
   '''
   cols = ["가족", "공연", "공포", "다큐멘터리", "드라마",'멜로','뮤지컬','미스터리','범죄','사극','서부극','성인물','스릴러','서부극','성인물','스릴러','애니메이션','액션','어드벤처','전쟁','코미디','판타지']
   st_ms = st.multiselect( '장르',option = str,default=cols)
