@@ -8,6 +8,13 @@ def app():
   cursor = connect.cursor();
   
   input="select 영화명 from box"
+  cursor.execute(input)
+  for i in cursor:
+      st.write(i)
+  
+  
+  
+  
   st.write(input)
   
   #quary_string = f"select 영화명, 개봉일, 순위, 누적관객수fantasy,peopleNm from box where movieNm in ('{영화제목}')"
