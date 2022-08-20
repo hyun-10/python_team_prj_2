@@ -7,6 +7,9 @@ def app():
   connect = sqlite3.connect('box.db', isolation_level=None)
   cursor = connect.cursor();
   
+  select replace('box.db',' "" ','')
+  
+  
   input="select 영화명, 순위, 개봉일, 누적관객수, img_url from box ORDER BY 개봉일 DESC"
   cursor.execute(input)
   for i in cursor:
