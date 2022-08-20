@@ -7,7 +7,7 @@ def app():
   connect = sqlite3.connect('box.db', isolation_level=None)
   cursor = connect.cursor();
   
-  input=select 영화명 from box
+  input=select movieCd from box
   st.write(input)
   
   #quary_string = f"select 영화명, 개봉일, 순위, 누적관객수fantasy,peopleNm from box where movieNm in ('{영화제목}')"
