@@ -7,7 +7,7 @@ def app():
   connect = sqlite3.connect('box.db', isolation_level=None)
   cursor = connect.cursor();
   
-  cursor.execute(select 영화명, from box)
+  cursor.execute('select 영화명, from box')
   for i in cursor:
       st.write(cursor)
   
