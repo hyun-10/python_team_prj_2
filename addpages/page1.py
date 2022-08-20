@@ -9,7 +9,7 @@ def app():
   
   cursor.execute('select 영화명, from box')
   for i in cursor:
-      st.write(cursor)
+      st.write(i)
   
   
   #input="select 영화명, 순위, 개봉일, 누적관객수, img_url from box ORDER BY 개봉일 DESC"
