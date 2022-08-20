@@ -15,12 +15,12 @@ def app():
   input="select 영화명, 순위, 개봉일, 누적관객수, img_url from box ORDER BY 개봉일 DESC where 영화명 NOT IN(' " " ')"
   cursor.execute(input)
   for i in cursor:
-      #st.write(i)
+      st.write(i)
   
   
   
   
-  st.write(input)
+  #st.write(input)
   
   #quary_string = f"select 영화명, 개봉일, 순위, 누적관객수fantasy,peopleNm from box where movieNm in ('{영화제목}')"
 
