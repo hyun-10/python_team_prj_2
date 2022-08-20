@@ -7,7 +7,7 @@ def app():
   connect = sqlite3.connect('box.db', isolation_level=None)
   cursor = connect.cursor();
   
-  input="select 영화명, 개봉일, 순위, 누적관객수, img_url from box ORDER BY 개봉일 SC"
+  input="select 영화명, 개봉일, 순위, 누적관객수, img_url from box ORDER BY 개봉일 ASC"
   cursor.execute(input)
   for i in cursor:
       st.write(i)
