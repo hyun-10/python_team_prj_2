@@ -17,7 +17,7 @@ def app():
   
   
   
-  input = 'SELECT 영화명,개봉일,img_url FROM box WHERE 개봉일 NOT IN null ORDER BY 영화명 DESC'
+  input = 'SELECT 영화명,개봉일,img_url FROM box WHERE 개봉일 IN (%-%) ORDER BY 영화명 DESC'
   
   #input = 'SELECT 영화명,개봉일,img_url FROM box WHERE NOT 개봉일 IS null ORDER BY 영화명 DESC'
   cursor.execute(input)
