@@ -31,7 +31,8 @@ def app():
   input = 'SELECT 영화명,개봉일,img_url FROM box WHERE NOT 영화명 IS " GROUP BY 영화명 ORDER BY 개봉일 DESC '
   cursor.execute(input)
   for i in cursor:
-      st.write(i[:5])
+     j=i[:5]
+      st.write(j)
   
   
   
