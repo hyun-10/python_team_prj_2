@@ -32,21 +32,3 @@ def app():
   input = 'SELECT 영화명,개봉일,img_url FROM box WHERE 개봉일 BETWEEN 2202-07-24 AND 2202-08-24 GROUP BY 영화명 ORDER BY 개봉일 DESC '
   cursor.execute(input)
   st.write(cursor[:10]
-  #for i in cursor:
-      #st.write(i)
-  
-  
-  
-  
-  #st.write(input)
-  
-  #quary_string = f"select 영화명, 개봉일, 순위, 누적관객수fantasy,peopleNm from box where movieNm in ('{영화제목}')"
-
-  
-  #cursor.execute(quary_string)
-  #for test in cursor:
-      #st.write(test)
-      
-
-
-      #st.image(img_url,width=300,)
