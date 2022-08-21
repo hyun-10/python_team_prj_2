@@ -31,8 +31,7 @@ def app():
   input = 'SELECT 영화명,개봉일,img_url FROM box WHERE 개봉일 BETWEEN 2022-08-24 AND 1973-07-27 ORDER BY 개봉일 DESC '
   cursor.execute(input)
   for i in cursor:
-     j=i[:5]
-      st.write(j)
+      st.write(i)
   
   
   
