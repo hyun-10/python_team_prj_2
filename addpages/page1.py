@@ -17,7 +17,7 @@ def app():
   
   
   
-  input = 'SELECT 영화명,개봉일, 누적관객수,img_url FROM box'
+  input = 'SELECT 영화명,개봉일, 누적관객수,img_url FROM box order by ANIMAL_ID asc'
   cursor.execute(input)
   for i in cursor:
       st.write(i)
