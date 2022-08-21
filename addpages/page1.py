@@ -17,7 +17,7 @@ def app():
   
   
   
-  input = 'select 영화명, 순위, 개봉일, 누적관객수, from box'
+  input = 'select 영화명, 순위, 개봉일, 누적관객수, from box;'
   cursor.execute(input)
   for i in cursor:
       st.write(i)
