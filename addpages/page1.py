@@ -37,7 +37,8 @@ def app():
   count = 0
   while count <10:
       count = count +1
-      st.write(cursor)
+      movie_10 = cursor
+      st.write(movie_10)
       
            
   
