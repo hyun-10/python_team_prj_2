@@ -17,7 +17,7 @@ def app():
   
   
   
-  input = 'SELECT 영화명,개봉일,img_url FROM box where 개봉일 NOT IN(null) ORDER BY 개봉일 ASC '
+  input = 'SELECT 영화명,개봉일,img_url FROM box WHERE 개봉일 NOT IN(null) ORDER BY 개봉일 ASC '
   cursor.execute(input)
   for i in cursor:
       st.write(i)
