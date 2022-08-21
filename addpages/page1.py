@@ -17,7 +17,7 @@ def app():
   
   
   
-  input = 'SELECT * FROM tab'
+  input = 'SELECT * FROM box'
   cursor.execute(input)
   for i in cursor:
       st.write(i)
