@@ -35,10 +35,12 @@ def app():
   cursor.execute(input)
   
   count = 0
-  while count <10:
+  for i in cursor:
+      while count <10:
+      
       count = count +1
-      movie_10 = cursor
-      st.write(movie_10)
+
+      st.write(i)
       
            
   
