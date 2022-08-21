@@ -17,7 +17,7 @@ def app():
   
   
   
-  input = 'select 영화명, 순위, 개봉일, 누적관객수, img_url from box ORDER BY 개봉일 ASC '
+  input = 'select 영화명, 순위, 개봉일, 누적관객수, img_url_y from box ORDER BY 개봉일 ASC '
   cursor.execute(input)
   for i in cursor:
       st.write(i)
