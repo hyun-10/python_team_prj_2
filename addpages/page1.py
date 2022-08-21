@@ -23,7 +23,7 @@ def app():
   input = 'SELECT 영화명,개봉일,img_url FROM box WHERE NOT 개봉일 IS null ORDER BY 개봉일 ASC'
   cursor.execute(input)
   for i in cursor:
-      st.write(i)
+      st.write(i[:5])
   
   
   
