@@ -14,7 +14,7 @@ def app():
   
   #input="select 영화명, img_url from box ORDER BY 개봉일 DESC where 영화명 NOT IN(' " " ')"
   #input="select 영화명, 순위, 개봉일, 누적관객수, img_url from box where 영화인,순위,개봉일,누적관객수 NOT IN('"') ORDER BY 영화명 DESC"
-  input = 'select 영화명, 순위, 개봉일, 누적관객수, img_url from box where order by 영화명 desc'
+  input = 'select 영화명, 순위, 개봉일, 누적관객수, img_url from box where ORDER BY 영화명 DESC'
   cursor.execute(input)
   for i in cursor:
       st.write(i)
