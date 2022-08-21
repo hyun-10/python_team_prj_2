@@ -28,7 +28,7 @@ def app():
   
   #input = 'SELECT 영화명,개봉일,img_url FROM box WHERE NOT 개봉일 IS null GROUP BY 영화명 ORDER BY 개봉일 DESC '
   
-  input = 'SELECT 영화명,개봉일,img_url FROM box WHERE NOT 영화명 IS """" GROUP BY 영화명 ORDER BY 개봉일 DESC '
+  input = 'SELECT 영화명,개봉일,img_url FROM box WHERE NOT 영화명 IS " GROUP BY 영화명 ORDER BY 개봉일 DESC '
   cursor.execute(input)
   for i in cursor:
       st.write(i[:5])
