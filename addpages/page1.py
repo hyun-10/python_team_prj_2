@@ -32,7 +32,7 @@ def app():
   cursor.execute(input)
   for i in cursor:
      j=i[:5]
-      st.write(j)
+      st.write(g)
   
   
   
