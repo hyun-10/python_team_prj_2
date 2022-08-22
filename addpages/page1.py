@@ -18,7 +18,7 @@ def app():
   
   col1, col2, col3, col4, col5= st.columns(5)#줄 갯수
 
-  for 영화명,개봉일,img_url, j in cursor, range(1,6):
+  for 영화명,개봉일,img_url, j in cursor, 5:
       with f'col{j}':
           st.write(영화명, 개봉일 )
           st.image(img_url,width=130,)
