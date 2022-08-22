@@ -18,23 +18,21 @@ def app():
   
   col1, col2, col3, col4, col5= st.columns(5)
   for i in cursor:
-      st.write('')
+      st.write()
       with col1:
-          st.write(i)
+          st.write(영화명)
           st.image(img_url,width=130,)
-
-        
       with col2:
-          st.write(i )
+          st.write(영화명)
           st.image(img_url,width=130,)
       with col3:
-          st.write(i )
+          st.write(영화명)
           st.image(img_url,width=130,)
       with col4:
-          st.write(i )
+          st.write(영화명)
           st.image(img_url,width=130,)
       with col5:
-          st.write(i)
+          st.write(영화명)
           st.image(img_url,width=130,)
        
 
