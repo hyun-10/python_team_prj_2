@@ -37,7 +37,7 @@ def app():
           st.write(영화명)
           st.image(img_url,width=130,)
 
-     with col5:
+      with col5:
           st.write(영화명)
           st.image(img_url,width=130,)
        
