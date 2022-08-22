@@ -47,4 +47,4 @@ def app():
       
 
 
-      st.image(img_url,width=130)
+      #st.image(img_url,width=130)
