@@ -22,16 +22,16 @@ def app():
       with col1:
           st.write(영화명)
           st.image(img_url,width=130,)
-      with col2:
+          col2:
           st.write(영화명)
           st.image(img_url,width=130,)
-      with col3:
+          col3:
           st.write(영화명)
           st.image(img_url,width=130,)
-      with col4:
+          col4:
           st.write(영화명)
           st.image(img_url,width=130,)
-      with col5:
+          col5:
           st.write(영화명)
           st.image(img_url,width=130,)
        
