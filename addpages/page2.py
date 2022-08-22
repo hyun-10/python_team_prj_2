@@ -4,7 +4,7 @@ st.write('영화정보 조회')
 
 
 def app():
-  connect = sqlite3.connect('reset3.db', isolation_level=None)
+  connect = sqlite3.connect('movie.db', isolation_level=None)
   cursor = connect.cursor();
   
   Category1 = st.columns(5)
