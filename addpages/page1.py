@@ -47,9 +47,7 @@ def app():
       with col3:
           st.write(영화명, 개봉일 )
           st.image(img_url,width=130,)
-      with col4:
-          st.write(영화명, 개봉일 )
-          st.image(img_url,width=130,)
+
 
   
       
