@@ -19,7 +19,7 @@ def app():
   col1, col2, col3, col4, col5= st.columns(5)
   for i in cursor:
       st.write('')
-      with col1=:
+      with col1:
           st.write(i)
           st.image(img_url,width=130,)
 
