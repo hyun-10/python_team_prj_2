@@ -38,9 +38,9 @@ def app():
   
   input = st.text_input('')
   
-  quary_string = f"select movieCd, movieNm, prdtYear, showTm, prdtStatNM, nations, family, performance, horror, etc, documentary, drama, melodrama, musical, mystery, crime, historical, western, adult, thriller, animated, action, adventure, war, comedy, fantasy,peopleNm, actors, staffs, img_url from movie where movieNm in ('{input}')"
+  #quary_string = f"select movieCd, movieNm, prdtYear, showTm, prdtStatNM, nations, family, performance, horror, etc, documentary, drama, melodrama, musical, mystery, crime, historical, western, adult, thriller, animated, action, adventure, war, comedy, fantasy,peopleNm, actors, staffs, img_url from movie where movieNm in ('{input}')"
+  quary_string= select id, name, address from user;
 
-  
   cursor.execute(quary_string)
   for test in cursor:
       st.write(test)
