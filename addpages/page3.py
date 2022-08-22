@@ -2,7 +2,6 @@ import streamlit as st
 import sqlite3
 connect = sqlite3.connect('movie_people_included_imgURL.db', isolation_level=None)
 
-st.title('영화인 정보 조회')
 
 
 
