@@ -4,6 +4,7 @@ import sqlite3
 
 
 def app():
+  col1,col2,col3,col4,col5= st.beta_columns(5)
   connect = sqlite3.connect('box.db', isolation_level=None)
   cursor = connect.cursor();
   
