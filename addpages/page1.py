@@ -37,7 +37,7 @@ def app():
   
   for 영화명,개봉일,img_url in cursor:
       st.write(영화명, 개봉일 )
-      st.image(imgURL,width=150,)
+      st.image(img_url,width=150,)
 
       
            
