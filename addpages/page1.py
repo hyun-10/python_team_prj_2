@@ -23,17 +23,17 @@ def app():
           st.write(영화명)
           st.image(img_url,width=130,)
           col2:
-          st.write(영화명)
-          st.image(img_url,width=130,)
+              st.write(영화명)
+              st.image(img_url,width=130,)
           col3:
-          st.write(영화명)
-          st.image(img_url,width=130,)
+              st.write(영화명)
+              st.image(img_url,width=130,)
           col4:
-          st.write(영화명)
-          st.image(img_url,width=130,)
+              st.write(영화명)
+              st.image(img_url,width=130,)
           col5:
-          st.write(영화명)
-          st.image(img_url,width=130,)
+              st.write(영화명)
+              st.image(img_url,width=130,)
        
 
 
