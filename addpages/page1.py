@@ -22,7 +22,7 @@ def app():
       with col1:
           st.write(영화명, 개봉일 )
           st.image(img_url,width=130,)
- '''       
+  '''       
   with col2:
           st.write(영화명, 개봉일 )
           st.image(img_url,width=130,)
