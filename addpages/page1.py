@@ -36,7 +36,7 @@ def app():
       with col_list_2[j]:
           st.image(img_url,width=130)
           st.write(영화명)
-      i+=1
+      j+=1
       
 
 
