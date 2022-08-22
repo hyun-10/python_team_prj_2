@@ -36,10 +36,13 @@ def app():
   cursor.execute(input)
   
   col1, col2, col3, col4 ,col5= st.columns(5)
-  for 영화명,개봉일,img_url, j in cursor, range(1,6):
+  for 영화명,개봉일,img_url in cursor:
       
-      colj.write(영화명, 개봉일 )
-      colj.image(img_url,width=130,)
+      col1.write(영화명, 개봉일 )
+      col1.image(img_url,width=130,)
+      
+      col2.write(영화명, 개봉일 )
+      col2.image(img_url,width=130,)
       
            
   
