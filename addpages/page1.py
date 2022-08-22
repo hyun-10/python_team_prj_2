@@ -4,7 +4,7 @@ import sqlite3
 
 
 def app():
-  col1,col2,col3,col4,col5= st.columns(5)
+  
   connect = sqlite3.connect('box.db', isolation_level=None)
   cursor = connect.cursor();
   
@@ -36,9 +36,12 @@ def app():
   cursor.execute(input)
   
   
-  for 영화명,개봉일,img_url in cursor:
+  for 영화명,개봉일,img_url , j in cursor, range(1,10):
+      cols = st.columns(5)
+      cols[j].wirte(
       st.write(영화명, 개봉일 )
       st.image(img_url,width=130,)
+      )
 
       
            
