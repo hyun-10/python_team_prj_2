@@ -17,8 +17,8 @@ def app():
   cursor.execute(input)
   
   col1, col2, col3, col4, col5= st.columns(5)
-  for i in cursor:
-      st.write()
+  for 영화명, 개봉일, img_url in cursor:
+
       with col1:
           st.write(영화명)
           st.image(img_url,width=130,)
