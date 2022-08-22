@@ -21,16 +21,16 @@ def app():
   col_list=[col1,col2,col3,col4,col5,col6, col7, col8, col9, col10]
 
   i=0
-
+  j=6
   for 영화명, 개봉일, img_url in cursor:
       with col_list[i]:
           st.image(img_url,width=130,)
           st.write(영화명)
-      i=1,2,3,4,5
-      with col_list[i]:
+      i+=1<6
+      with col_list[j]:
           st.image(img_url,width=130)
           st.write(영화명)
-      i=6,7,8,9,10
+      j+=1
 
       
 
