@@ -37,8 +37,20 @@ def app():
   
   col1, col2, col3, col4, col5= st.columns(5)
 
-  for 영화명,개봉일,img_url, col in cursor, range(col1,col2,col3,col4,col5):
-      with col:
+  for 영화명,개봉일,img_url in cursor:
+      with col1:
+          st.write(영화명, 개봉일 )
+          st.image(img_url,width=130,)
+      with col2:
+          st.write(영화명, 개봉일 )
+          st.image(img_url,width=130,)
+      with col3:
+          st.write(영화명, 개봉일 )
+          st.image(img_url,width=130,)
+      with col4:
+          st.write(영화명, 개봉일 )
+          st.image(img_url,width=130,)
+      with col5:
           st.write(영화명, 개봉일 )
           st.image(img_url,width=130,)
   
