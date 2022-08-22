@@ -35,7 +35,7 @@ def app():
   Data_category18 = Category4[3].checkbox("판타지")
 
 
-  input = st.text_input(label,value=",")
+  input = st.text_input(label,value="")
 
   
   #quary_string = f"select movieCd, movieNm, prdtYear, showTm, prdtStatNM, nations, family, performance, horror, etc, documentary, drama, melodrama, musical, mystery, crime, historical, western, adult, thriller, animated, action, adventure, war, comedy, fantasy,peopleNm, actors, staffs, img_url from movie where movieNm in ('{input}')"
