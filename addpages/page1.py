@@ -1,8 +1,7 @@
 import streamlit as st
 import sqlite3
 
-
-
+st.write('8/24일기준')
 def app():
   
   connect = sqlite3.connect('box.db', isolation_level=None)
