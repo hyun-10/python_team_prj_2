@@ -35,7 +35,7 @@ def app():
   input = 'SELECT 영화명,개봉일,img_url FROM box WHERE 개봉일 BETWEEN 1973-07-27 AND 2202-08-24 GROUP BY 영화명 ORDER BY 개봉일 DESC limit 5'
   cursor.execute(input)
   
-  col1, col2, col3, col4, col5= st.columns(1)#줄 갯수
+  col1, col2, col3, col4, col5= st.columns(5)#줄 갯수
 
   for 영화명,개봉일,img_url in cursor:
       with col1:
