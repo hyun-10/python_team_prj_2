@@ -32,15 +32,14 @@ def app():
   
   #input = 'SELECT 영화명,개봉일,img_url FROM box WHERE 개봉일 GROUP BY 영화명 BETWEEN 2202-07-24 AND 2202-08-24  ORDER BY 개봉일 DESC '
   
-  input = 'SELECT 영화명,개봉일,img_url FROM box WHERE 개봉일 BETWEEN 1973-07-27 AND 2202-08-24 GROUP BY 영화명 ORDER BY 개봉일 DESC limit 10'
+  input = 'SELECT 영화명,개봉일,img_url FROM box WHERE 개봉일 BETWEEN 1973-07-27 AND 2202-08-24 GROUP BY 영화명 ORDER BY 개봉일 DESC limit 5'
   cursor.execute(input)
   
-  
-  for 영화명,개봉일,img_url in cursor:
-
-      st.write(영화명, 개봉일 )
-      st.image(img_url,width=130,)
+  col1, col2, col3, col4 ,col5= st.columns(5)
+  for 영화명,개봉일,img_url, j in cursor, range(1,6):
       
+      colj.write(영화명, 개봉일 )
+      colj.image(img_url,width=130,)
       
            
   
