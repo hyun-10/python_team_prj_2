@@ -26,12 +26,11 @@ def app():
       with col_list[i]:
           st.image(img_url,width=130,)
           st.write(영화명)
-      i+=1
-      i<6
+      i=1,2,3,4,5
       with col_list[i]:
           st.image(img_url,width=130)
           st.write(영화명)
-      i+=i
+      i=6,7,8,9,10
 
       
 
