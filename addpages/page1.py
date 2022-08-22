@@ -17,8 +17,8 @@ def app():
   cursor.execute(input)
   
   col1, col2, col3, col4, col5= st.columns(5)
-  col = ['col1', col2', 'col3', 'col4', 'col5']
-  col = [col + j fro j in range(1,6)]
+  
+
 
   for 영화명, 개봉일, img_url in cursor:
       with col1:
