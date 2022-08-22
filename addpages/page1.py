@@ -36,8 +36,8 @@ def app():
   
   
   for i in cursor:
-      st.write(i)
-      st.image(img_url,width=150,)
+      st.write(img_url,width=150,)
+
       
            
   
