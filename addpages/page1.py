@@ -35,8 +35,8 @@ def app():
   cursor.execute(input)
   
   
-  for i in cursor:
-      st.write(img_url,width=150,)
+  for 영화명,개봉일,img_url in cursor:
+      st.write(img_url,width=150)
 
       
            
