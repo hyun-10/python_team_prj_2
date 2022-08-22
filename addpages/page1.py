@@ -38,11 +38,11 @@ def app():
   col1, col2= st.columns(2)
   for 영화명,개봉일,img_url in cursor:
       
-      col1.write(영화명, 개봉일 )
-      col1.image(img_url,width=130,)
+      col1=st.write(영화명, 개봉일 )
+      col1=st.image(img_url,width=130,)
       
-      col2.write(영화명, 개봉일 )
-      col2.image(img_url,width=130,)
+      col2=st.write(영화명, 개봉일 )
+      col2=st.image(img_url,width=130,)
       
            
   
