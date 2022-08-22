@@ -22,8 +22,9 @@ def app():
   i=0
   for 영화명, 개봉일, img_url in cursor:
       with col_list[i]:
-          st.write(영화명)
+          
           st.image(img_url,width=130,)
+          st.write(영화명)
       i+=1
 
        
