@@ -17,23 +17,12 @@ def app():
   cursor.execute(input)
   
   col1, col2, col3, col4, col5= st.columns(5)#줄 갯수
-
-  for 영화명,개봉일,img_url in cursor:
-      with col1:
+  for i in range(1,6):
+  print(f'col{i}')
+  for 영화명,개봉일,img_url, j in cursor, range(1,6):
+      with f'col{j}':
           st.write(영화명, 개봉일 )
           st.image(img_url,width=130,)
-      with col2:
-          st.write(영화명, 개봉일 )
-          st.image(img_url,width=130,)
-      with col3:
-          st.write(영화명, 개봉일 )
-          st.image(img_url,width=130,)
-      with col4:
-          st.write(영화명, 개봉일 )
-          st.image(img_url,width=130,)
-      with col5:
-          st.write(영화명, 개봉일 )
-          st.image(img_url,width=130,)        
 
 
   
