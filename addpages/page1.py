@@ -28,6 +28,7 @@ def app():
       with col_list[i]:
           st.image(img_url,width=130)
           st.write(영화명)
+          st.write(개봉일)
       i+=1
       
       
@@ -40,6 +41,7 @@ def app():
       with col_list_2[j]:
           st.image(img_url,width=130)
           st.write(영화명)
+          st.write(개봉일)
       j+=1
       
 
