@@ -22,11 +22,20 @@ def app():
   i=0
   for 영화명, 개봉일, img_url in cursor:
       with col_list[i]:
-          
           st.image(img_url,width=130,)
           st.write(영화명)
       i+=1
 
+      
+  col1, col2, col3, col4, col5= st.columns(5)
+  
+  col_list=[col1,col2,col3,col4,col5 ]
+  i=0
+  for 영화명, 개봉일, img_url in cursor:
+      with col_list[i]:
+          st.image(img_url,width=130,)
+          st.write(영화명)
+      i+=1
        
 
 
