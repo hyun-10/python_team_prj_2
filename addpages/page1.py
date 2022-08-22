@@ -36,13 +36,11 @@ def app():
   cursor.execute(input)
   
   
-  for 영화명,개봉일,img_url , j in cursor, range(1,11):
-      cols = st.columns(10)
-      cols[j].wirte(
+  for 영화명,개봉일,img_url , j in cursor:
+
       st.write(영화명, 개봉일 )
       st.image(img_url,width=130,)
-      )
-
+      
       
            
   
