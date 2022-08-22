@@ -17,8 +17,8 @@ def app():
   cursor.execute(input)
   
   col1, col2, col3, col4, col5= st.columns(5)
-  
-  col_list=[col1,col2,col3,col4,col5]
+  col6, col7, col8, col9, col10= st.columns(5)
+  col_list=[col1,col2,col3,col4,col5,col6, col7, col8, col9, col10]
   i=0
   for 영화명, 개봉일, img_url in cursor:
       with col_list[i]:
