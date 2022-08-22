@@ -22,22 +22,19 @@ def app():
       with col1:
           st.write(영화명)
           st.image(img_url,width=130,)
-            with col2:
-                st.write(영화명)
-                st.image(img_url,width=130,)
-  for 영화명, 개봉일, img_url in cursor:
+
       with col2:
           st.write(영화명)
           st.image(img_url,width=130,)
-  for 영화명, 개봉일, img_url in cursor:
+
       with col3:
           st.write(영화명)
           st.image(img_url,width=130,)
-  for 영화명, 개봉일, img_url in cursor:
+
       with col4:
           st.write(영화명)
           st.image(img_url,width=130,)
-  for 영화명, 개봉일, img_url in cursor:
+
       with col5:
           st.write(영화명)
           st.image(img_url,width=130,)
