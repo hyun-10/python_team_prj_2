@@ -10,7 +10,7 @@ def app():
   Category1 = st.columns(5)
   Data_category = Category1[0].checkbox("가족") 
   if Data_category:
-      cursor = 'select family from movie movieNm, img_url where 1=family'
+      cursor = 'select family from movieNm,peopleNm,img_url where 1=family'
   Data_category1 = Category1[1].checkbox("공연") 
   Data_category2 = Category1[2].checkbox("공포") 
   
