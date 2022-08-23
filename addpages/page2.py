@@ -36,15 +36,15 @@ def app():
   Data_category18 = Category4[3].checkbox("판타지")
 
 
-  input = st.text_input('')
+  #input = st.text_input('')
 
   
   #quary_string = f"select movieCd, movieNm, prdtYear, showTm, prdtStatNM, nations, family, performance, horror, etc, documentary, drama, melodrama, musical, mystery, crime, historical, western, adult, thriller, animated, action, adventure, war, comedy, fantasy,peopleNm, actors, staffs, img_url from movie where movieNm in ('{input}')"
   #quary_string = f"select movieNm, peopleNm,img_url from movie where movieNm in ('{input}') "
   #quary_string = "select movieNm, peopleNm,img_url from movie where movieNm like '%코난%' "
-  if input:
-      quary_string = f"select movieNm, peopleNm,img_url from movie where movieNm like '%{input}%' "
-      cursor.execute(quary_string)
+  #if input:
+      #quary_string = f"select movieNm, peopleNm,img_url from movie where movieNm like '%{input}%' "
+      #cursor.execute(quary_string)
   for movieNm,peopleNm,img_url in cursor:
       st.image(img_url,width=130)
       st.write(movieNm, peopleNm)
