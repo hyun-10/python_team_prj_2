@@ -55,7 +55,7 @@ def app():
         st.write(movieNm, peopleNm)
       
 '''
-  def and_(and family>'0')# and performance>'0' and horror>'0' and etc>'0' and documentary>'0' and drama>'0' and melodrama>'0' and musical>'0' and mystery>'0' and crime>'0' and historical>'0' and western>'0' and adult>'0' and thriller>'0'):
+  def and_(and family>'0'):
         if input:
         quary_string = f"select movieNm, peopleNm,img_url from movie where movieNm like '%{input}%' and family>'0'  "
         cursor.execute(quary_string)
