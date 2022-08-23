@@ -9,6 +9,9 @@ def app():
   
   Category1 = st.columns(5)
   Data_category = Category1[0].checkbox("가족") 
+  if Data_category:
+      and_(and family>'0')
+      
 
   Data_category1 = Category1[1].checkbox("공연") 
   Data_category2 = Category1[2].checkbox("공포") 
@@ -41,6 +44,7 @@ def app():
   #quary_string = f"select movieCd, movieNm, prdtYear, showTm, prdtStatNM, nations, family, performance, horror, etc, documentary, drama, melodrama, musical, mystery, crime, historical, western, adult, thriller, animated, action, adventure, war, comedy, fantasy,peopleNm, actors, staffs, img_url from movie where movieNm in ('{input}')"
   #quary_string = f"select movieNm, peopleNm,img_url from movie where movieNm in ('{input}') "
   #quary_string = "select movieNm, peopleNm,img_url from movie where movieNm like '%코난%' "
+'''
   if input:
       quary_string = f"select movieNm, peopleNm,img_url from movie where movieNm like '%{input}%' and family>'0' and performance>'0' and f'{}' "
       cursor.execute(quary_string)
@@ -49,6 +53,17 @@ def app():
         st.image(img_url,width=130)
         st.write(movieNm, peopleNm)
       
+'''
+  def and_(and family>'0')# and performance>'0' and horror>'0' and etc>'0' and documentary>'0' and drama>'0' and melodrama>'0' and musical>'0' and mystery>'0' and crime>'0' and historical>'0' and western>'0' and adult>'0' and thriller>'0'):
+        if input:
+        quary_string = f"select movieNm, peopleNm,img_url from movie where movieNm like '%{input}%' and family>'0'  "
+        cursor.execute(quary_string)
+    for movieNm,peopleNm,img_url in cursor:
+
+          st.image(img_url,width=130)
+          st.write(movieNm, peopleNm)
+    
+
 
 
       
