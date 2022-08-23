@@ -57,6 +57,9 @@ def app():
       family=1
       quary_string = "select movieNm, peopleNm,img_url from movie where movieNm like '%{0}%' and family=={0} ".format(input,family)
       cursor.execute(quary_string)
+      for movieNm,peopleNm,img_url in cursor:
+          st.image(img_url,width=130)
+          st.write(movieNm, peopleNm)
 
   input = st.text_input('')
   if input:
@@ -95,9 +98,7 @@ def app():
 
 
 
-  for movieNm,peopleNm,img_url in cursor:
-          st.image(img_url,width=130)
-          st.write(movieNm, peopleNm)
+
 
 
       
