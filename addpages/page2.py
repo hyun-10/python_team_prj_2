@@ -45,7 +45,7 @@ def app():
       quary_string = f"select movieNm, peopleNm,img_url from movie where movieNm like '%{input}%' "
       cursor.execute(quary_string)
   for movieNm,peopleNm,img_url in cursor:
-      if family==1:
+      if family!=0:
         st.image(img_url,width=130)
         st.write(movieNm, peopleNm)
       
