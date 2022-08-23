@@ -42,7 +42,7 @@ def app():
   #quary_string = f"select movieCd, movieNm, prdtYear, showTm, prdtStatNM, nations, family, performance, horror, etc, documentary, drama, melodrama, musical, mystery, crime, historical, western, adult, thriller, animated, action, adventure, war, comedy, fantasy,peopleNm, actors, staffs, img_url from movie where movieNm in ('{input}')"
   #quary_string = f"select movieNm, peopleNm,img_url from movie where movieNm in ('{input}') "
   #quary_string = "select movieNm, peopleNm,img_url from movie where movieNm like '%코난%' "
-
+'''
   if input:
       quary_string = f"select movieNm, peopleNm,img_url from movie where movieNm like '%{input}%' and family=='{1}'  "
       cursor.execute(quary_string)
@@ -50,19 +50,19 @@ def app():
 
         st.image(img_url,width=130)
         st.write(movieNm, peopleNm)
-
-
 '''
-  def and_(family):
+
+
+
 
         if input:
-        quary_string = "select movieNm, peopleNm,img_url from movie where movieNm like '%{0}%' and {1}=='1'   ".format(input, family)
+        quary_string = "select movieNm, peopleNm,img_url family, performance, horror, etc, documentary, drama, melodrama, musical, mystery, crime, historical, western, adult, thriller, animated, action, adventure, war, comedy, fantasy from movie where movieNm like '%{0}%' "
         cursor.execute(quary_string)
     for movieNm,peopleNm,img_url in cursor:
-
-          st.image(img_url,width=130)
-         st.write(movieNm, peopleNm)
- '''
+        
+        st.image(img_url,width=130)
+        st.write(movieNm, peopleNm)
+ 
 
 
 
