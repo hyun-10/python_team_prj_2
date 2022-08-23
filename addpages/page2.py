@@ -9,11 +9,6 @@ def app():
   
   Category1 = st.columns(5)
   Data_category = Category1[0].checkbox("가족") 
-'''
-  if Data_category:
-      family = "and family>'0'"
-      and_(family)
- '''   
 
   Data_category1 = Category1[1].checkbox("공연") 
   Data_category2 = Category1[2].checkbox("공포") 
