@@ -55,7 +55,7 @@ def app():
 
   def and_(input,family):
       family=1
-      quary_string = "select movieNm, peopleNm,img_url from movie where movieNm like '%{0}%' and family==(;{1}') ".format(input,family)
+      quary_string = "select movieNm, peopleNm,img_url from movie where movieNm like '%{0}%' and family==('{1}') ".format(input,family)
       cursor.execute(quary_string)
 
   input = st.text_input('')
