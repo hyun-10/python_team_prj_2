@@ -9,9 +9,7 @@ def app():
   
   Category1 = st.columns(5)
   Data_category = Category1[0].checkbox("가족") 
-  Data_category = "SELECT family FROM movie WHERE '1'"
-  if Data_category:
-      quary_string = Data_category
+
   Data_category1 = Category1[1].checkbox("공연") 
   Data_category2 = Category1[2].checkbox("공포") 
   
@@ -43,8 +41,8 @@ def app():
   #quary_string = f"select movieCd, movieNm, prdtYear, showTm, prdtStatNM, nations, family, performance, horror, etc, documentary, drama, melodrama, musical, mystery, crime, historical, western, adult, thriller, animated, action, adventure, war, comedy, fantasy,peopleNm, actors, staffs, img_url from movie where movieNm in ('{input}')"
   #quary_string = f"select movieNm, peopleNm,img_url from movie where movieNm in ('{input}') "
   #quary_string = "select movieNm, peopleNm,img_url from movie where movieNm like '%코난%' "
-  #if input:
-      #quary_string = f"select movieNm, peopleNm,img_url from movie where movieNm like '%{input}%' "
+  if input:
+      quary_string = f"select movieNm, peopleNm,img_url from movie where movieNm like '%{input}%' "
       cursor.execute(quary_string)
   for movieNm,peopleNm,img_url in cursor:
       st.image(img_url,width=130)
