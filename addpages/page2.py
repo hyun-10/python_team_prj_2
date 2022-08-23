@@ -10,7 +10,7 @@ def app():
   Category1 = st.columns(5)
   Data_category = Category1[0].checkbox("가족") 
   if Data_category:
-      family = and family>'0'
+      family = "and family>'0'"
       and_(family)
       
 
