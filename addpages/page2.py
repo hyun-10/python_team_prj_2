@@ -44,7 +44,7 @@ def app():
   #quary_string = "select movieNm, peopleNm,img_url from movie where movieNm like '%코난%' "
 
   if input:
-      quary_string = f"select movieNm, peopleNm,img_url from movie where movieNm like '%{input}%' and family=='0'  "
+      quary_string = f"select movieNm, peopleNm,img_url from movie where movieNm like '%{input}%' and family=='1'  "
       cursor.execute(quary_string)
   for movieNm,peopleNm,img_url in cursor:
 
