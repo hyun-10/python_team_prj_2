@@ -3,6 +3,14 @@ import sqlite3
 st.write('영화정보 조회')
 
 
+def and_(input,family):
+    family=1
+    quary_string = "select movieNm, peopleNm,img_url from movie where movieNm like '%{0}%' and family=={0} ".format(input,family)
+    cursor.execute(quary_string)
+    for movieNm,peopleNm,img_url in cursor:
+        st.image(img_url,width=130)
+        st.write(movieNm, peopleNm)
+
 def app():
   '''
   connect = sqlite3.connect('movie.db', isolation_level=None)
@@ -53,13 +61,7 @@ def app():
         st.write(movieNm, peopleNm)
   '''
 
-  def and_(input,family):
-      family=1
-      quary_string = "select movieNm, peopleNm,img_url from movie where movieNm like '%{0}%' and family=={0} ".format(input,family)
-      cursor.execute(quary_string)
-      for movieNm,peopleNm,img_url in cursor:
-          st.image(img_url,width=130)
-          st.write(movieNm, peopleNm)
+
 
   input = st.text_input('')
   if input:
