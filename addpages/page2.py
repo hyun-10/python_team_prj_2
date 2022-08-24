@@ -4,15 +4,16 @@ st.write('영화정보 조회')
 
 
 def and_(input,family):
-    family=1
-    quary_string = "select movieNm, peopleNm,img_url from movie where movieNm like '%{0}%' and family=={0} ".format(input,family)
+
+    
+    quary_string = "select movieNm, peopleNm,img_url from movie where movieNm like '%{0}%' and family=={1} ".fromat(input, family)
     cursor.execute(quary_string)
     for movieNm,peopleNm,img_url in cursor:
         st.image(img_url,width=130)
         st.write(movieNm, peopleNm)
 
 def app():
-  '''
+  
   connect = sqlite3.connect('movie.db', isolation_level=None)
   cursor = connect.cursor();
   
@@ -52,17 +53,17 @@ def app():
   #quary_string = f"select movieNm, peopleNm,img_url from movie where movieNm in ('{input}') "
   #quary_string = "select movieNm, peopleNm,img_url from movie where movieNm like '%코난%' "
 
-  if input:
-      quary_string = f"select movieNm, peopleNm,img_url from movie where movieNm like '%{input}%' and family=='1'  "
-      cursor.execute(quary_string)
-  for movieNm,peopleNm,img_url in cursor:
+  #if input:
+      #quary_string = f"select movieNm, peopleNm,img_url from movie where movieNm like '%{input}%' and family=='1'  "
+      #cursor.execute(quary_string)
+  #for movieNm,peopleNm,img_url in cursor:
 
-        st.image(img_url,width=130)
-        st.write(movieNm, peopleNm)
-  '''
+        #st.image(img_url,width=130)
+        #st.write(movieNm, peopleNm)
+  
 
 
-
+'''
   input = st.text_input('')
   if input:
       and_(input)
@@ -96,7 +97,7 @@ def app():
   Data_category16 = Category4[1].checkbox("전쟁")
   Data_category17 = Category4[2].checkbox("코미디")
   Data_category18 = Category4[3].checkbox("판타지")
-
+'''
 
 
 
