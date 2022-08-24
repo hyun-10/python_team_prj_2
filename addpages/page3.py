@@ -1,6 +1,6 @@
 import streamlit as st
 import sqlite3
-connect = sqlite3.connect('filmo_coms_1.db', isolation_level=None)
+connect = sqlite3.connect('movie_people_included_imgURL.db', isolation_level=None)
 
 
 
