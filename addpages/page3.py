@@ -15,7 +15,7 @@ def app():
   
   for peopleCd, peopleNmEn ,repRoleNm, peopleNm ,imgURL ,filmoNames,peopleNm  in cursor:
       st.write(peopleNm, peopleNmEn)
-      
+      st.image(imgURL,width=150,)
       st.write(filmoNames)
 
-      st.image(imgURL,width=150,)
+      
