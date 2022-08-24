@@ -1,10 +1,10 @@
 import streamlit as st
 import sqlite3
-connect = sqlite3.connect('movie_people_included_imgURL.db', isolation_level=None)
+#connect = sqlite3.connect('movie_people_included_imgURL.db', isolation_level=None)
 #connect = sqlite3.connect('streamlit_cloud_sqlite_test/blob/main/db/movie_people_included_imgURL.db', isolation_level=None)
 #connect = sqlite3.connect('./db/movie_people_included_imgURL.db', isolation_level=None)
 #connect = sqlite3.connect('../db/movie_people_included_imgURL.db', isolation_level=None)
-#connect = sqlite3.connect('db/test_1/movie_people_included_imgURL.db', isolation_level=None)
+connect = sqlite3.connect('db/test_1/movie_people_included_imgURL.db', isolation_level=None)
 
 
 
