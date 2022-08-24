@@ -16,7 +16,7 @@ def app():
   col1, col2 = st.columns(2)
   for peopleCd, peopleNmEn ,repRoleNm, peopleNm ,imgURL ,filmoNames,peopleNm  in cursor:
       st.write(peopleNm, peopleNmEn)
-      col1 = st.image(imgURL,width=150,)
-      col2 = st.write(filmoNames)
+      with col1 = st.image(imgURL,width=150,)
+      with col2 = st.write(filmoNames)
 
       
