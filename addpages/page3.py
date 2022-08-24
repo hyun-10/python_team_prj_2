@@ -8,7 +8,7 @@ import sqlite3
 connect = sqlite3.connect(db/movie_people_included_imgURL.db', isolation_level=None)
 
 
-https://github.com/hyun-10/streamlit_cloud_sqlite_test/blob/6d5c81cfde8c3a2de8f930d737f96d010e4ef4ba/db/test_1
+
 def app():
   connect = sqlite3.connect('movie_people_included_imgURL.db', isolation_level=None)
   cursor = connect.cursor();
