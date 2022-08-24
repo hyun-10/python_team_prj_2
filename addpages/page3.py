@@ -13,7 +13,7 @@ def app():
   quary_string = f"select peopleCd, peopleNmEn ,repRoleNm, peopleNm ,imgURL ,filmoNames ,peopleNm from movie_people_included_imgURL where peopleNm in ('{input}')"
   cursor.execute(quary_string)
   
-  col1, col2 = st.columns(2)([0.3, 1.0, 0.3])
+  col1, col2 = st.columns([0.3, 1.0, 0.3])
   for peopleCd, peopleNmEn ,repRoleNm, peopleNm ,imgURL ,filmoNames,peopleNm  in cursor:
       st.write(peopleNm, peopleNmEn)
       with col1 :
