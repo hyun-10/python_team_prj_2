@@ -72,7 +72,7 @@ def app():
   Data_categorys[16] = Data_categorys16 
   Data_categorys[17] = Data_categorys17 
   Data_categorys[18] = Data_categorys18 
-  Data_categorys[19] = Data_categorys19
+  Data_categorys[19] = Data_categorys19 
 
   for count in range(19) :
     if Data_categorys[count]:
