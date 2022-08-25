@@ -29,7 +29,8 @@ def app():
   algo = full_data_learning(genre_)
   
   def mvCd_of_unshow(genre_,puid,punick):
-    data = pd.read_csv(f'recommendation/genre/{genre_}_review_noh.csv', names=['code','score','raw_user', 'userCd','user_id', 'user_nick', 'movie', 'genre','review'])
+    #data = pd.read_csv(f'recommendation/genre/{genre_}_review_noh.csv', names=['code','score','raw_user', 'userCd','user_id', 'user_nick', 'movie', 'genre','review'])
+    data = pd.read_csv(f'db/4p/{genre_}_review_noh.csv', names=['code','score','raw_user', 'userCd','user_id', 'user_nick', 'movie', 'genre','review'])
     str_expr = '(user_id == @puid) and (user_nick == @punick)'
     total = data.code.unique()
     query = data.query(str_expr)['code'].unique()
