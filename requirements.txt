@@ -2,6 +2,6 @@ streamlit
 scikit-surprise
 surprise
 
-surprise.dataset
+dataset
 pandas
 numpy
