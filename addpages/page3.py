@@ -2,7 +2,7 @@ import streamlit as st
 import sqlite3
 
 def app():
-  connect = sqlite3.connect('db/3movie_people_included_imgURL.db', isolation_level=None)
+  connect = sqlite3.connect('db/3p/movie_people_included_imgURL.db', isolation_level=None)
   cursor = connect.cursor();
 
   input = st.text_input("영화인 이름")
