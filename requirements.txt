@@ -3,9 +3,7 @@ streamlit
 scikit-surprise
 
 surprise
-SVD
-Dataset
-accuracy
+
 surprise.model_selection
 train_test_split
 surprise.dataset
