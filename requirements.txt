@@ -1,7 +1,7 @@
 streamlit
 scikit-surprise
 surprise
-surprise.model_selection
-surprise.dataset
+
+
 pandas
 numpy
