@@ -28,7 +28,7 @@ def app():
   d8 = pd.read_csv('db/4p/total_reviews_8.csv')
   d9 = pd.read_csv('db/4p/total_reviews_9.csv')
   d10 = pd.read_csv('db/4p/total_reviews_10.csv')
-  d12 = pd.concat(map(pd.read_csv, [d1, d2]), ignore_index=True)
+  d12 = pd.concat([d1, d2])
   st.writd(d12)
  
   
