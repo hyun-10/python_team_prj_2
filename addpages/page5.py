@@ -69,16 +69,16 @@ def app():
     select_movie = movie_info[movie_info['영화코드']==code]
     select_movie_review = pd.merge(select_movie, movie_reviews, left_on='영화코드', right_on='code', how='left')
     movie_ = select_movie_review[['영화코드',	'영화이름',	'제작년도',	'상영시간',	'제작상태',	'제작국가',	'장르',	'감독',	'배우',	'스탭수',	'img_url',	'code',	'movie',	'genre']].iloc[0]
-    print(movie_)
+    st.write(movie_)
     bool_review = select_movie_review['review']!=select_movie_review['review']
     if bool_review[0]:
-      print('리뷰가 없습니다.')
+      st.write('리뷰가 없습니다.')
       select_movie_review = np.nan # 시각화하지않기 위한 장치
     elif len(select_movie_review['review']) <100:
-      print(len(select_movie_review['review']),'개의 리뷰가 있습니다.')
+      st.write(len(select_movie_review['review']),'개의 리뷰가 있습니다.')
       select_movie_review = np.nan # 시각화하지않기 위한 장치
     else :
-      print(len(select_movie_review['review']),'개의 리뷰가 있습니다.')
+      st.write(len(select_movie_review['review']),'개의 리뷰가 있습니다.')
     return   select_movie_review
 
   
