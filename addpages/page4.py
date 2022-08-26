@@ -30,9 +30,9 @@ def app():
     col = 'item rating user'
     quary_string = f"select * from {genre_}_review_noh_1 "
     cursor.execute(quary_string)
-    
+    reader = Reader(line_format=col, sep=',', rating_scale=(0,10))
     for i in cursor:
-      data_folds = DatasetAutoFolds(ratings_file=i)
+      data_folds = DatasetAutoFolds(ratings_file=i,  reader=reader)
       st.write(data_folds)
 
     '''
