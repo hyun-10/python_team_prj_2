@@ -19,12 +19,14 @@ def app():
   puid=puid[0:4]+'****'
   
   
-  connect = sqlite3.connect(f'db/4p/{genre_}_review_noh_1.db', isolation_level=None)
-  cursor = connect.cursor()
+
   
 
   
   def full_data_learning(genre_):
+    
+    connect = sqlite3.connect(f'db/4p/{genre_}_review_noh_1.db', isolation_level=None)
+    cursor = connect.cursor()
     col = 'item rating user'
     
     
@@ -37,7 +39,7 @@ def app():
   
 
 
-  algo = full_data_learning(genre_)
+algo = full_data_learning(genre_)
 
   def mvCd_of_unshow(genre_,puid,punick):
     #data = pd.read_csv(f'db/4p/{genre_}_review_noh_1.db', names=['code','score','raw_user', 'userCd','user_id', 'user_nick', 'movie', 'genre','review'])
