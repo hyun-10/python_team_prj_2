@@ -34,7 +34,7 @@ def app():
   da_10= pd.read_csv('db/4p/family_review_noh_1.csv')
   da_11= pd.read_csv('db/4p/fantasy_review_noh_1.csv')
   da_12= pd.read_csv('db/4p/fear_review_noh_1.csv')
-  da_13= pd.read_csv('db/4p/history_review_noh_1.csv')
+  da_13= pd.read_csv('db/4p/history_review_noh_2.csv')
   da_14= pd.read_csv('db/4p/melo_review_noh_1.csv')
   da_15= pd.read_csv('db/4p/musical_review_noh_1.csv')
   da_16= pd.read_csv('db/4p/mystery_review_noh_1.csv')
