@@ -45,7 +45,7 @@ def app():
   #for i in ('adult','adventure','animation','comedy','crime','documentary','drama','etc','family','fantasy','fear','history','melo','musical','mystery','thriller','war','western'):
     #df = pd.read_csv(f'db/4p/{i}_review_noh_1.csv', encoding='utf-8', engine='python')
   movie_reviews = pd.concat([da_15,da_16])
-  st.write(da_15)
+  st.write(movie_reviews)
   '''
   
   movie_reviews = movie_reviews.astype({'code':'str'})
