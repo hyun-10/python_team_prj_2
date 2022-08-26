@@ -30,7 +30,10 @@ def app():
     col = 'item rating user'
     quary_string = f"select * from {genre_}_review_noh_1 "
     cursor.execute(quary_string)
-    st.write(cursor)
+    
+    for i in cursor:
+      data_folds = DatasetAutoFolds(ratings_file=i)
+    st.write(data_folds)
     '''
     data_folds = DatasetAutoFolds(ratings_file=cursor)
     trainset = data_folds.build_full_trainset()
