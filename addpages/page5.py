@@ -80,7 +80,7 @@ def app():
     return   select_movie_review
 
   st.write(movie_reviews['select_genre'].value_counts())
-  
+  mv_reviews = get_review(code,movie,movie_reviews)
   
   
   
