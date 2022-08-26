@@ -32,7 +32,7 @@ def app():
     #cursor.execute(quary_string)
     reader = Reader(line_format=col, sep=',', rating_scale=(0,10))
     
-    a=db/4p/fantasy_review_noh_1.db
+    a=(db/4p/fantasy_review_noh_1.db ,isolation_level=None)
     st.write(a)
     '''
     data_folds = DatasetAutoFolds(ratings_file=f'db/4p/{genre_}_review_noh_1.db', reader=reader)
