@@ -11,5 +11,5 @@ numpy
 
 konlpy
 
-update -qq
+
 fonts-nanum* -qq
