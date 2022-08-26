@@ -84,7 +84,7 @@ def app():
   
   mv_reviews = get_review(code,movie,movie_reviews)
   
-  st.write(mv_reviews['review'])
+  st.write(mv_reviews)
   
 ''' 
  
