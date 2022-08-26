@@ -20,7 +20,7 @@ def app():
   import numpy as np
 
   st.write('page4 영화추천')
-'''  
+
   genre_='fantasy'
   puid= 'adiv****'
   punick= '푸른불'
@@ -28,6 +28,8 @@ def app():
 
   def full_data_learning(genre_):
     col = 'item rating user'
+    
+    
     reader = Reader(line_format=col, sep=',', rating_scale=(0,10))
     data_folds = DatasetAutoFolds(ratings_file=f'db/4p/{genre_}_review_noh_1.db', reader=reader)
     trainset = data_folds.build_full_trainset()
@@ -38,7 +40,7 @@ def app():
 
 
   algo = full_data_learning(genre_)
-  
+'''
   def mvCd_of_unshow(genre_,puid,punick):
     #data = pd.read_csv(f'db/4p/{genre_}_review_noh_1.db', names=['code','score','raw_user', 'userCd','user_id', 'user_nick', 'movie', 'genre','review'])
     data = pd.read_csv(f'db/4p/{genre_}_review_noh_1.db', names=['code','score','raw_user', 'userCd','user_id', 'user_nick', 'movie', 'genre','review'])
