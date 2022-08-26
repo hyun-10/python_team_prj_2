@@ -39,7 +39,7 @@ def app():
   
 
 
-algo = full_data_learning(genre_)
+  algo = full_data_learning(genre_)
 
   def mvCd_of_unshow(genre_,puid,punick):
     
