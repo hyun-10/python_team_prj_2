@@ -81,7 +81,7 @@ def app():
       print(len(select_movie_review['review']),'개의 리뷰가 있습니다.')
     return   select_movie_review
 
-  st.write(movie_reviews['select_genre'].value_counts())
+  
   mv_reviews = get_review(code,movie,movie_reviews)
   
   
