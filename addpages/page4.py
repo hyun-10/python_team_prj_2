@@ -49,7 +49,7 @@ def app():
     
     quary_string = f"select * from {genre_}_review_noh_1"
     cursor.execute(quary_string )
-    
+    st.write(cursor)
     
     
     data = cursor, table=(['index','code','score','raw_user', 'userCd','user_id', 'user_nick', 'movie', 'genre','review'])
