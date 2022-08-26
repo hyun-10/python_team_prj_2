@@ -31,7 +31,7 @@ def app():
   d34 = pd.concat([d3, d4])
   d56 = pd.concat([d5, d6])
   d78 = pd.concat([d7, d8])
-  d910 = pd.concat([d9, d10])
+
   d1234 = pd.concat([d12,d34])
   d5678 = pd.concat([d56,d78])
   movie_reviews = pd.concat([d1234,d5678])
