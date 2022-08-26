@@ -42,10 +42,10 @@ def app():
   movie_reviews['select_genre'].value_counts()
   
   #code = 	'20226579' # 리뷰없음
-  #code = '19190007' # 리뷰있음/드라마 _ 리뷰45개 _ 시각화x
+  code = '19190007' # 리뷰있음/드라마 _ 리뷰45개 _ 시각화x
   #code = '19328008' # 리뷰있음/범죄 _ 리뷰42개  _ 시각화x
   #code = '19560023' # 리뷰있음/전쟁 _ 리뷰4개 _ 시각화x
-  code = '19770022' # 리뷰있음/SF _ 리뷰32개  _ 시각화x
+  #code = '19770022' # 리뷰있음/SF _ 리뷰32개  _ 시각화x
   #code = '20119397' # 리뷰있음 / 공연 _ 리뷰356개  _ 시각화o
   #code = '19900057' # 리뷰있음 / 성인물 _ 리뷰5개 _ 시각화x
   #code = '20226162' # 리뷰있음/액션  _ 리뷰25개 _ 시각화x
@@ -78,7 +78,7 @@ def app():
     else :
       print(len(select_movie_review['review']),'개의 리뷰가 있습니다.')
     return   select_movie_review
-  st.write(code,movie)
+
   st.write(movie_reviews['select_genre'].value_counts())
   
   
