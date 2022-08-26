@@ -8,6 +8,7 @@ from surprise import Reader
 import pandas as pd
 import numpy as np
 import sqlite3
+import global
 def app():
 
   
@@ -24,7 +25,7 @@ def app():
 
   
   def full_data_learning(genre_):
-
+    global data_folds
     connect = sqlite3.connect(f'db/4p/{genre_}_review_noh_1.db', isolation_level=None)
     cursor = connect.cursor()
     col = 'item rating user'
