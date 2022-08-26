@@ -35,11 +35,13 @@ def app():
     
     for i in cursor:
       data_folds = DatasetAutoFolds(i)
+    
+    '''  
     trainset = data_folds.build_full_trainset()
     algo = SVD(n_epochs=5, n_factors=500, random_state=0)
     algo.fit(trainset)
     return algo
- 
+ '''
 
 
   algo = full_data_learning(genre_)
