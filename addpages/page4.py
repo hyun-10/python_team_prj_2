@@ -35,7 +35,7 @@ def app():
 
 
     
-    data_folds = DatasetAutoFolds(ratings_file=f'db/4p/{genre_}_review_noh_1.db',reader = reader )
+    data_folds = DatasetAutoFolds(ratings_file=f'db/4p/{genre_}_review_noh_1.db',reader = reader , encoding='cp949' )
     trainset = data_folds.build_full_trainset()
     algo = SVD(n_epochs=5, n_factors=500, random_state=0)
     algo.fit(trainset)
