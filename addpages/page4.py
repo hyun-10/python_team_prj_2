@@ -68,4 +68,26 @@ def app():
 
   user_movie_recomendation_df = user_movie_recomendation_df.set_index('rank')
   st.dataframe(user_movie_recomendation_df.sort_index())
+  
+  
+  genre_='fantasy'
+  puid= 'adiv****'
+  punick= '푸른불'
+  
+  
+  puid=puid[0:4]+'****' # 아이디아스키값처리
+  algo = full_data_learning(genre_) # 장르의 리뷰학습
+  unshow_mvCd_array = mvCd_of_unshow(genre_,puid,punick) # 사용자가 보지 않은 영화선정
+  user_mvrating_est_list = prediction(algo,puid,unshow_mvCd_array) # 예측평점구하기
+  user_movie_recomendation_df = get_recomendationmovie(user_mvrating_est_list) #추천영화목록구하기
+  #장르별 추천영화 순위순으로 표출
+  user_movie_recomendation_df = user_movie_recomendation_df.set_index('rank')
+  user_movie_recomendation_df.sort_index()
+  st.write(user_movie_recomendation_df)
+  
+  
+  
+  
+  
+  
  
