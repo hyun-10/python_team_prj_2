@@ -28,7 +28,7 @@ def app():
   for i in ('adult','adventure','animation','comedy','crime','documentary','drama','etc','family','fantasy','fear','history','melo','musical','mystery','thriller','war','western'):
     df = pd.read_csv(f'db/4p/{i}_review_noh_1.csv')
     movie_reviews = pd.concat([data, df])
-  st.write(data)
+  st.write(movie_reviews)
                  
   #f'db/4p/{action}_review_noh_1.csv'
   #action_review_noh_1.concat
