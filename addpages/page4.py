@@ -39,7 +39,7 @@ def app():
   
 
 
-    algo = full_data_learning(genre_)
+algo = full_data_learning(genre_)
 
   def mvCd_of_unshow(genre_,puid,punick):
     #data = pd.read_csv(f'db/4p/{genre_}_review_noh_1.db', names=['code','score','raw_user', 'userCd','user_id', 'user_nick', 'movie', 'genre','review'])
@@ -61,8 +61,8 @@ def app():
     return isbn_est_list
   
   
-    user_mvrating_est_list = prediction(algo,puid,unshow_mvCd_array)
-    user_mvrating_est_list
+  user_mvrating_est_list = prediction(algo,puid,unshow_mvCd_array)
+  user_mvrating_est_list
   
   def get_recomendationmovie(prediction):
     movies = pd.read_table('db/4p/movie_info_1.db', sep=',', encoding='utf-8', engine='python')
@@ -80,12 +80,12 @@ def app():
       rank=rank+1
     return df_q
   
-    user_movie_recomendation_df = get_recomendationmovie(user_mvrating_est_list)
+  user_movie_recomendation_df = get_recomendationmovie(user_mvrating_est_list)
 
-    user_movie_recomendation_df = user_movie_recomendation_df.set_index('rank')
-    user_movie_recomendation_df.sort_index()
+  user_movie_recomendation_df = user_movie_recomendation_df.set_index('rank')
+  user_movie_recomendation_df.sort_index()
     
-    st.write(user_movie_recomendation_df)
+  st.write(user_movie_recomendation_df)
   
   
 
