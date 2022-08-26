@@ -36,7 +36,7 @@ def app():
     return algo
   
 
-'''
+
   algo = full_data_learning(genre_)
 
   def mvCd_of_unshow(genre_,puid,punick):
@@ -85,6 +85,4 @@ def app():
     
   st.write(user_movie_recomendation_df)
   
-  
-'''
-  
+    
