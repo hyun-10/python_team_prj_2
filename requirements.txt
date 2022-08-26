@@ -9,7 +9,7 @@ pandas
 numpy
 
 
-konlpy wordcloud
+konlpy
 
 update -qq
 fonts-nanum* -qq
