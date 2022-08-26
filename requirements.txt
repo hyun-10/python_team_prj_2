@@ -11,5 +11,5 @@ numpy
 
 konlpy
 
-collections
+
 wordcloud
