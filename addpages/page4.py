@@ -32,15 +32,13 @@ def app():
     #cursor.execute(quary_string)
     reader = Reader(line_format=col, sep=',', rating_scale=(0,10))
     
-    a=sqlite3.connect('db/4p/fantasy_review_noh_1.db' )
-    st.write(a)
-    '''
-    data_folds = DatasetAutoFolds(ratings_file=f'db/4p/{genre_}_review_noh_1.db')
+
+    data_folds = DatasetAutoFolds(ratings_file= sqlite3.connect(f'db/4p/{genre_}_review_noh_1.db'))
     trainset = data_folds.build_full_trainset()
     algo = SVD(n_epochs=5, n_factors=500, random_state=0)
     algo.fit(trainset)
     return algo
-    '''
+ 
 
 
   algo = full_data_learning(genre_)
