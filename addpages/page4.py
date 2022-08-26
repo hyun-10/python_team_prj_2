@@ -33,7 +33,7 @@ def app():
     #cursor.execute(quary_string)
     reader = Reader(line_format=col, sep=',', rating_scale=(0,10))
     
-    st.write(connect)
+    st.write(cursor)
 
     data_folds = DatasetAutoFolds(cursor)
 
