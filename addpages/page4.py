@@ -26,7 +26,7 @@ def app():
     algo.fit(trainset)
     return algo
 
-  algo = full_data_learning(family)
+  algo = full_data_learning('family')
   
   def mvCd_of_unshow(genre_,puid,punick):
     #data = pd.read_csv(f'db/4p/{genre_}_review_noh.csv_1', names=['code','score','raw_user', 'userCd','user_id', 'user_nick', 'movie', 'genre','review'])
