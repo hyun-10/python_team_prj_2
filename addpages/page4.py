@@ -55,7 +55,7 @@ def app():
     #df_q =np.delete(total,indexes)
     return total
 
-unshow_mvCd_array = mvCd_of_unshow(genre_,puid,punick)
+  unshow_mvCd_array = mvCd_of_unshow(genre_,puid,punick)
   def prediction(algo,uid, uia):
     pred = [algo.predict(uid=str(uid), iid=str(isbn)) for isbn in uia]
     ests = lambda x : x.est
@@ -65,8 +65,8 @@ unshow_mvCd_array = mvCd_of_unshow(genre_,puid,punick)
     return isbn_est_list
   
   
-user_mvrating_est_list = prediction(algo,puid,unshow_mvCd_array)
-user_mvrating_est_list
+  user_mvrating_est_list = prediction(algo,puid,unshow_mvCd_array)
+  user_mvrating_est_list
   
   def get_recomendationmovie(prediction):
     movies = pd.read_table('db/4p/movie_info_1.db', sep=',', encoding='utf-8', engine='python')
@@ -84,11 +84,11 @@ user_mvrating_est_list
       rank=rank+1
     return df_q
   
-user_movie_recomendation_df = get_recomendationmovie(user_mvrating_est_list)
+  user_movie_recomendation_df = get_recomendationmovie(user_mvrating_est_list)
 
-user_movie_recomendation_df = user_movie_recomendation_df.set_index('rank')
-user_movie_recomendation_df.sort_index()
+  user_movie_recomendation_df = user_movie_recomendation_df.set_index('rank')
+  user_movie_recomendation_df.sort_index()
     
-st.write(user_movie_recomendation_df)
+  st.write(user_movie_recomendation_df)
   
     
