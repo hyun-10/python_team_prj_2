@@ -68,50 +68,7 @@ def app():
     else :
       print(len(select_movie_review['review']),'개의 리뷰가 있습니다.')
     return   select_movie_review
-  
-  mv_reviews = get_review(code,movie,movie_reviews)
-  
-  
-  def refined_review(review):
-    #세종사전실행
-    okt = Okt()
-    #단어리스트만들기
-    word_list = []
-    word_list = review
-    #형태소분리
-    sentences_tag = []
-
-    for sentence in word_list:
-        morph = okt.pos(sentence)
-        sentences_tag.append(morph)
-    #명사추출
-    noun_list = []
-    for sentence in sentences_tag:
-        for word, tag in sentence:
-            if tag in ["Noun"]:
-                noun_list.append(word)
-    #두글자 이상인 단어만 추출
-    noun_list = [n for n in noun_list if len(n) > 1]
-    #단어별로 개수세기
-    counts = Counter(noun_list)
-    tags = counts.most_common(50)
-    # 일반적인 단어빼기
-    tags=dict(tags)
-    stop_words = ['영화', '감독', '배우', 'ㅋㅋ', 'ㅎㅎ', 'ㅠㅠ', '근데', '진짜']
-
-    for word in stop_words:
-      if word in tags.keys():
-        del tags[word]
-    return tags
-  
-  st.write(mv_reviews)
-  
-  
-  
-  
-  
-  
-  
+  st.write(code,movie,movie_reviews)
   
   
   
