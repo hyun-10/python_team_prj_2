@@ -7,38 +7,36 @@ from surprise.dataset import DatasetAutoFolds
 from surprise import Reader
 import pandas as pd
 import numpy as np
-
+import sqlite3
 def app():
-  import streamlit as st
-  from surprise import SVD
-  from surprise import Dataset
-  from surprise import accuracy
-  from surprise.model_selection import train_test_split
-  from surprise.dataset import DatasetAutoFolds
-  from surprise import Reader
-  import pandas as pd
-  import numpy as np
 
+  
   st.write('page4 영화추천')
 
   genre_='fantasy'
   puid= 'adiv****'
   punick= '푸른불'
   puid=puid[0:4]+'****'
+  
+  
+  connect = sqlite3.connect(f'db/4p/{genre_}_review_noh_1.db', isolation_level=None)
+  cursor = connect.cursor()
+  
 
+  
   def full_data_learning(genre_):
     col = 'item rating user'
     
     
-    reader = Reader(line_format=col, sep=',', rating_scale=(0,10))
-    data_folds = DatasetAutoFolds(ratings_file=f'db/4p/{genre_}_review_noh_1.db', reader=reader)
+
+    data_folds = DatasetAutoFolds(ratings_file=cursor)
     trainset = data_folds.build_full_trainset()
     algo = SVD(n_epochs=5, n_factors=500, random_state=0)
     algo.fit(trainset)
     return algo
   
 
-
+'''
   algo = full_data_learning(genre_)
 
   def mvCd_of_unshow(genre_,puid,punick):
@@ -88,5 +86,5 @@ def app():
   st.write(user_movie_recomendation_df)
   
   
-
+'''
   
