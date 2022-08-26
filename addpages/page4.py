@@ -42,7 +42,7 @@ def app():
 algo = full_data_learning(genre_)
 
   def mvCd_of_unshow(genre_,puid,punick):
-    #data = pd.read_csv(f'db/4p/{genre_}_review_noh_1.db', header=['code','score','raw_user', 'userCd','user_id', 'user_nick', 'movie', 'genre','review'],index_col=False)
+    
     
     connect = sqlite3.connect(f'db/4p/{genre_}_review_noh_1.db', isolation_level=None)
     cursor = connect.cursor()
@@ -52,8 +52,8 @@ algo = full_data_learning(genre_)
     total = data.code.unique()
     query = data.query(str_expr)['code'].unique()
     indexes = [np.where(total==i)[0][0] for i in query]
-    df_q =np.delete(total,indexes)
-    return df_q
+    #df_q =np.delete(total,indexes)
+    return total
 
 
   def prediction(algo,uid, uia):
