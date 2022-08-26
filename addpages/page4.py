@@ -49,7 +49,7 @@ def app():
   user_mvrating_est_list = prediction(algo,puid,unshow_mvCd_array)
   
   def get_recomendationmovie(prediction):
-    movies = pd.read_table('db/4p/movie_info_1.csv', sep=',', encoding='utf-8', engine='python')
+    movies = pd.read_table('db/4p/movie_info.csv', sep=',', encoding='utf-8', engine='python')
     mvCd_list = []
     for i in prediction :
       mvCd_list.append(i[0])
