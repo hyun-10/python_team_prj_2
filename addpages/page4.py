@@ -32,15 +32,15 @@ def app():
     #cursor.execute(quary_string)
     reader = Reader(line_format=col, sep=',', rating_scale=(0,10))
     
-
-
-    
+    a=db/4p/{genre_}_review_noh_1.db
+    st.write(a)
+    '''
     data_folds = DatasetAutoFolds(ratings_file=f'db/4p/{genre_}_review_noh_1.db', reader=reader)
     trainset = data_folds.build_full_trainset()
     algo = SVD(n_epochs=5, n_factors=500, random_state=0)
     algo.fit(trainset)
     return algo
-    
+    '''
 
 
   algo = full_data_learning(genre_)
