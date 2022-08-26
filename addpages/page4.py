@@ -20,7 +20,7 @@ def app():
   import numpy as np
 
   st.write('page4 영화추천')
-  
+'''  
   genre_='fantasy'
   puid= 'adiv****'
   punick= '푸른불'
@@ -83,6 +83,5 @@ def app():
   user_movie_recomendation_df.sort_index()
   
   
-  
-  
+'''
   
