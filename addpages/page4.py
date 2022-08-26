@@ -36,7 +36,7 @@ def app():
     
     for i in cursor:
       data_folds = DatasetAutoFolds(i)
-    st.write(data_folds)
+      st.write(data_folds)
     '''  
     trainset = data_folds.build_full_trainset()
     algo = SVD(n_epochs=5, n_factors=500, random_state=0)
