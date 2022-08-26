@@ -30,17 +30,18 @@ def app():
     col = 'item rating user'
     quary_string = f"select * from {genre_}_review_noh_1 "
     cursor.execute(quary_string)
-
+    st.write(cursor)
+    '''
     data_folds = DatasetAutoFolds(ratings_file=cursor)
     trainset = data_folds.build_full_trainset()
     algo = SVD(n_epochs=5, n_factors=500, random_state=0)
     algo.fit(trainset)
     return algo
-  
+    '''
 
 
   algo = full_data_learning(genre_)
-
+'''
   def mvCd_of_unshow(genre_,puid,punick):
     
     
@@ -96,4 +97,4 @@ def app():
     
   st.write(user_movie_recomendation_df)
   
-    
+'''    
