@@ -30,7 +30,7 @@ def app():
     movie_reviews = pd.concat([data, df])
   
                  
-  f'db/4p/{action}_review_noh_1.csv'
+  #f'db/4p/{action}_review_noh_1.csv'
   #action_review_noh_1.concat
   st.write(movie_reviews)
   
