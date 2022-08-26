@@ -19,8 +19,8 @@ def app():
   st.write('page5')
   
   
-  movie = pd.read_csv('db/4p/movie_info.csv')
-  movie = movie.astype({'영화코드':'str'})
+  #movie = pd.read_csv('db/4p/movie_info.csv')
+  #movie = movie.astype({'영화코드':'str'})
  
   data= pd.read_csv('db/4p/action_review_noh_1.csv', names=['code','score','raw_user', 'userCd','user_id', 'user_nick', 'movie', 'genre','review'])
   for i in ('adult','adventure','animation','comedy','crime','documentary','drama','etc','family','fantasy','fear','history','melo','musical','mystery','thriller','war','western'):
