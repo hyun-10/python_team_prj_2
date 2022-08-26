@@ -18,35 +18,18 @@ def app():
   
   st.write('page5')
   
-  
-  movie = pd.read_csv('db/4p/movie_info.csv')
-  movie = movie.astype({'영화코드':'str'})
- 
-  da_1= pd.read_csv('db/4p/action_review_noh_1.csv', names=['code','movie','genre', 'user_id','user_nick', 'score', 'review'])
-  da_2= pd.read_csv('db/4p/adult_review_noh_1.csv', names=['code','movie','genre', 'user_id','user_nick', 'score', 'review'])
-  da_3= pd.read_csv('db/4p/adventure_review_noh_1.csv', names=['code','movie','genre', 'user_id','user_nick', 'score', 'review'])
-  da_4= pd.read_csv('db/4p/animation_review_noh_1.csv', names=['code','movie','genre', 'user_id','user_nick', 'score', 'review'])
-  da_5= pd.read_csv('db/4p/comedy_review_noh_1.csv', names=['code','movie','genre', 'user_id','user_nick', 'score', 'review'])
-  da_6= pd.read_csv('db/4p/crime_review_noh_1.csv', names=['code','movie','genre', 'user_id','user_nick', 'score', 'review'])
-  da_7= pd.read_csv('db/4p/documentary_review_noh_1.csv', names=['code','movie','genre', 'user_id','user_nick', 'score', 'review'])
-  da_8= pd.read_csv('db/4p/drama_review_noh_1.csv', names=['code','movie','genre', 'user_id','user_nick', 'score', 'review'])
-  da_9= pd.read_csv('db/4p/etc_review_noh_1.csv', names=['code','movie','genre', 'user_id','user_nick', 'score', 'review'])
-  da_10= pd.read_csv('db/4p/family_review_noh_1.csv', names=['code','movie','genre', 'user_id','user_nick', 'score', 'review'])
-  da_11= pd.read_csv('db/4p/fantasy_review_noh_1.csv', names=['code','movie','genre', 'user_id','user_nick', 'score', 'review'])
-  da_12= pd.read_csv('db/4p/fear_review_noh_1.csv', names=['code','movie','genre', 'user_id','user_nick', 'score', 'review'])
-  da_13= pd.read_csv('db/4p/history_review_noh_3.csv', names=['code','movie','genre', 'user_id','user_nick', 'score', 'review'])
-  da_14= pd.read_csv('db/4p/melo_review_noh_1.csv', names=['code','movie','genre', 'user_id','user_nick', 'score', 'review'])
-  da_15= pd.read_csv('db/4p/musical_review_noh_1.csv', names=['code','movie','genre', 'user_id','user_nick', 'score', 'review'])
-  da_16= pd.read_csv('db/4p/mystery_review_noh_1.csv', names=['code','movie','genre', 'user_id','user_nick', 'score', 'review'])
-  da_17= pd.read_csv('db/4p/thriller_review_noh_1.csv', names=['code','movie','genre', 'user_id','user_nick', 'score', 'review'])
-  da_18= pd.read_csv('db/4p/war_review_noh_1.csv', names=['code','movie','genre', 'user_id','user_nick', 'score', 'review'])
-
-  
-  #for i in ('adult','adventure','animation','comedy','crime','documentary','drama','etc','family','fantasy','fear','history','melo','musical','mystery','thriller','war','western'):
-    #df = pd.read_csv(f'db/4p/{i}_review_noh_1.csv', encoding='utf-8', engine='python')
-  #movie_reviews = pd.concat([da_15,da_16])
-  dataFrame = pd.concat(map(pd.read_csv, [da_15, da_16]), ignore_index=True)
-  st.write(movie_reviews)
+  d1 = pd.read_csv('db/4p/total_reviews_1.csv')
+  d2 = pd.read_csv('db/4p/total_reviews_2.csv')
+  d3 = pd.read_csv('db/4p/total_reviews_3.csv')
+  d4 = pd.read_csv('db/4p/total_reviews_4.csv')
+  d5 = pd.read_csv('db/4p/total_reviews_5.csv')
+  d6 = pd.read_csv('db/4p/total_reviews_6.csv')
+  d7 = pd.read_csv('db/4p/total_reviews_7.csv')
+  d8 = pd.read_csv('db/4p/total_reviews_8.csv')
+  d9 = pd.read_csv('db/4p/total_reviews_9.csv')
+  d10 = pd.read_csv('db/4p/total_reviews_10.csv')
+  d12 = pd.concat(map(pd.read_csv, [d1, d2]), ignore_index=True)
+  st.writd(d12)
   '''
   
   movie_reviews = movie_reviews.astype({'code':'str'})
