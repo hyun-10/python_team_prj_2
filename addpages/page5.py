@@ -103,7 +103,7 @@ def app():
       if word in tags.keys():
         del tags[word]
     return tags
-  st.write(mv_reviews['review'])
+  st.write(mv_reviews('review'))
   tags = refined_review(get_review['review'])
   genre=["가족","공포(호러)","기타","다큐멘터리","드라마","멜로/로맨스","뮤지컬","미스터리","범죄","사극","서부극(웨스턴)","성인물(에로)","스릴러","애니메이션","액션","어드벤처","전쟁","코미디","판타지","SF","공연"]
   
