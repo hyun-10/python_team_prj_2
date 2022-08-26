@@ -25,8 +25,8 @@ def app():
   
   def full_data_learning(genre_):
 
-    #connect = sqlite3.connect(f'db/4p/{genre_}_review_noh_1.db', isolation_level=None)
-    #cursor = connect.cursor()
+    connect = sqlite3.connect(f'db/4p/{genre_}_review_noh_1.db', isolation_level=None)
+    cursor = connect.cursor()
     col = 'item rating user'
     #quary_string = f"select * from {genre_}_review_noh_1 "
     #cursor.execute(quary_string)
