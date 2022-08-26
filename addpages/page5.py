@@ -26,8 +26,7 @@ def app():
   d6 = pd.read_csv('db/4p/total_reviews_6.csv')
   d7 = pd.read_csv('db/4p/total_reviews_7.csv')
   d8 = pd.read_csv('db/4p/total_reviews_8.csv')
-  d9 = pd.read_csv('db/4p/total_reviews_9.csv')
-  d10 = pd.read_csv('db/4p/total_reviews_10.csv')
+
   d12 = pd.concat([d1, d2])
   d34 = pd.concat([d3, d4])
   d56 = pd.concat([d5, d6])
@@ -35,8 +34,7 @@ def app():
   d910 = pd.concat([d9, d10])
   d1234 = pd.concat([d12,d34])
   d5678 = pd.concat([d56,d78])
-  d18 = pd.concat([d1234,d5678])
-  movie_reviews = pd.concat([d18,d910])
+  movie_reviews = pd.concat([d1234,d5678])
   st.write(movie_reviews)
  
  
