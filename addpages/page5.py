@@ -30,7 +30,7 @@ def app():
 
   movie_reviews = pd.concat([d12,d34])
   
-
+  movie_reviews.drop(['Unnamed: 0','Unnamed: 0.1','Unnamed: 0.2'], axis=1, inplace=True)
   st.write(movie_reviews)
  
  
