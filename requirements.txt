@@ -7,3 +7,9 @@ dataset
 
 pandas
 numpy
+
+
+konlpy wordcloud
+
+update -qq
+fonts-nanum* -qq
