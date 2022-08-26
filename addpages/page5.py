@@ -68,7 +68,11 @@ def app():
     else :
       print(len(select_movie_review['review']),'개의 리뷰가 있습니다.')
     return   select_movie_review
-  st.write(code,movie,movie_reviews)
+  st.write(code,movie)
+  st.write(movie_reviews['select_genre'].value_counts())
+  
+  
+  
   
   
   
