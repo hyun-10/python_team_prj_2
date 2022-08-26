@@ -11,7 +11,7 @@ import sqlite3
 
 def app():
 
-  
+'''
   st.write('page4 영화추천')
 
   genre_='fantasy'
@@ -37,16 +37,16 @@ def app():
 
     data_folds = DatasetAutoFolds(cursor)
 
-    '''  
+
     trainset = data_folds.build_full_trainset()
     algo = SVD(n_epochs=5, n_factors=500, random_state=0)
     algo.fit(trainset)
     return algo
- '''
+
 
 
   algo = full_data_learning(genre_)
-'''
+
   def mvCd_of_unshow(genre_,puid,punick):
     
     
@@ -102,4 +102,4 @@ def app():
     
   st.write(user_movie_recomendation_df)
   
-'''    
+'''
