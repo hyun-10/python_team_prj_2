@@ -32,7 +32,8 @@ def app():
     cursor.execute(quary_string)
     
     for i in cursor:
-      st.write(i)
+      data_folds = DatasetAutoFolds(ratings_file=i)
+      st.write(data_folds)
 
     '''
     data_folds = DatasetAutoFolds(ratings_file=cursor)
