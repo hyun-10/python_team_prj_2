@@ -103,46 +103,8 @@ def app():
       if word in tags.keys():
         del tags[word]
     return tags
+  
   st.write(mv_reviews)
-  tags = refined_review(get_review['review'])
-  genre=["가족","공포(호러)","기타","다큐멘터리","드라마","멜로/로맨스","뮤지컬","미스터리","범죄","사극","서부극(웨스턴)","성인물(에로)","스릴러","애니메이션","액션","어드벤처","전쟁","코미디","판타지","SF","공연"]
-  
-  
-  genre_en=["family","fear","etc","documentary","drama","melo","musical","mystery","crime","history","western","adult","thriller","animation","action","adventure","war","comedy","fantasy","sf","performance"]
-  
-  img_path = 'db/4p/genre_imgs'
-  genre_imgs = os.listdir(img_path)
-
-  genre_img_dic={}
-  count=0
-  for i in genre_en:
-    genre_=genre[count]
-    genre_img=[]
-    for j in genre_imgs:
-      if i in j:
-        genre_img.append(j)
-    genre_img_dic[genre_]=genre_img
-    count+=1
-  
-  genre_img_dic
-  
-  def movie_review_wordcloud(mv_reviews,img_path,genre_img_dic):
-    movie_genre = mv_reviews['select_genre'][0]
-    genre_imgurl = img_path+'/'+genre_img_dic[movie_genre][0]
-    custom_mask = np.array(Image.open(genre_imgurl))
-    wordcloud = WordCloud(font_path=fontpath,
-                      background_color='white',width=500, height=500,
-                      max_words=len(tags), mask=custom_mask, # word의 최대 갯수와 마스크, font-size설정
-                      max_font_size=1000)
-    image_colors = ImageColorGenerator(custom_mask)
-    cloud = wordcloud.generate_from_frequencies(dict(tags))
-    plt.figure(figsize=(12,12))
-    plt.axis('off')
-    plt.imshow(cloud.recolor(color_func=image_colors), interpolation='bilinear') # 마스크용 이미지의 색으로 워드클라우드 생성
-    plt.show()
-  
-  st.write(movie_review_wordcloud(mv_reviews,img_path,genre_img_dic))
-  
   
   
   
