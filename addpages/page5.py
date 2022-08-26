@@ -15,6 +15,8 @@ import os
 
 
 def app():
+  movie = pd.read_csv('db/4p/movie_info.csv')
+  movie = movie.astype({'영화코드':'str'})
   
   st.write('page5')
   
