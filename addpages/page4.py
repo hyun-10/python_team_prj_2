@@ -19,7 +19,7 @@ def app():
   def full_data_learning(genre_):
     col = 'item rating user'
     reader = Reader(line_format=col, sep=',', rating_scale=(0,10))
-    data_folds = DatasetAutoFolds(ratings_file=f'db/p4/{genre_}_review_noh.csv_1', reader=reader)
+    data_folds = DatasetAutoFolds(ratings_file=f'db/p4/{genre_}_review_noh_1.csv', reader=reader)
     trainset = data_folds.build_full_trainset()
     algo = SVD(n_epochs=5, n_factors=500, random_state=0)
     algo.fit(trainset)
@@ -28,7 +28,7 @@ def app():
   algo = full_data_learning(genre_)
   
   def mvCd_of_unshow(genre_,puid,punick):
-    data = pd.read_csv(f'db/p4/{genre_}_review_noh.csv_1', names=['code','score','raw_user', 'userCd','user_id', 'user_nick', 'movie', 'genre','review'])
+    data = pd.read_csv(f'db/p4/{genre_}_review_noh_1.csv', names=['code','score','raw_user', 'userCd','user_id', 'user_nick', 'movie', 'genre','review'])
     str_expr = '(user_id == @puid) and (user_nick == @punick)'
     total = data.code.unique()
     query = data.query(str_expr)['code'].unique()
@@ -49,7 +49,7 @@ def app():
   user_mvrating_est_list = prediction(algo,puid,unshow_mvCd_array)
   
   def get_recomendationmovie(prediction):
-    movies = pd.read_table('db/p4/movie_info.csv_1', sep=',', encoding='utf-8', engine='python')
+    movies = pd.read_table('db/p4/movie_info_1.csv', sep=',', encoding='utf-8', engine='python')
     mvCd_list = []
     for i in prediction :
       mvCd_list.append(i[0])
