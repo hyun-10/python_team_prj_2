@@ -81,9 +81,9 @@ def app():
   user_mvrating_est_list = prediction(algo,puid,unshow_mvCd_array) # 예측평점구하기
   user_movie_recomendation_df = get_recomendationmovie(user_mvrating_est_list) #추천영화목록구하기
   #장르별 추천영화 순위순으로 표출
-  user_movie_recomendation_df = user_movie_recomendation_df.set_index('rank')
-  user_movie_recomendation_df.sort_index()
-  st.write(user_movie_recomendation_df)
+  user_movie_recomendation_df_ = user_movie_recomendation_df.set_index('rank')
+  user_movie_recomendation_df_.sort_index()
+  st.dataframe(user_movie_recomendation_df_)
   
   
   
