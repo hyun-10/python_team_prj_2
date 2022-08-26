@@ -47,7 +47,7 @@ def app():
     connect = sqlite3.connect(f'db/4p/{genre_}_review_noh_1.db', isolation_level=None)
     cursor = connect.cursor()
     
-    data = cursor, table=(['code','score','raw_user', 'userCd','user_id', 'user_nick', 'movie', 'genre','review'],index_col=False)
+    data = cursor, table=(['index','code','score','raw_user', 'userCd','user_id', 'user_nick', 'movie', 'genre','review'])
     str_expr = '(user_id == @puid) and (user_nick == @punick)'
     total = data.code.unique()
     query = data.query(str_expr)['code'].unique()
