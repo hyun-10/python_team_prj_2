@@ -152,7 +152,7 @@ def app():
     plt.imshow(cloud.recolor(color_func=image_colors), interpolation='bilinear') # 마스크용 이미지의 색으로 워드클라우드 생성
     plt.show()
   
-  st.write(movie_review_wordcloud(mv_reviews,img_path,genre_img_dic))
+  st.write(cloud)
   
   
   
