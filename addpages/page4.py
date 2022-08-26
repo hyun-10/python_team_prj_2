@@ -39,8 +39,8 @@ def app():
   
 
 
-  algo = full_data_learning(genre_)
-'''
+    algo = full_data_learning(genre_)
+
   def mvCd_of_unshow(genre_,puid,punick):
     #data = pd.read_csv(f'db/4p/{genre_}_review_noh_1.db', names=['code','score','raw_user', 'userCd','user_id', 'user_nick', 'movie', 'genre','review'])
     data = pd.read_csv(f'db/4p/{genre_}_review_noh_1.db', names=['code','score','raw_user', 'userCd','user_id', 'user_nick', 'movie', 'genre','review'])
@@ -85,5 +85,5 @@ def app():
   user_movie_recomendation_df.sort_index()
   
   
-'''
+
   
