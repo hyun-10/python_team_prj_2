@@ -23,7 +23,8 @@ def app():
   movie = movie.astype({'영화코드':'str'})
   #movie_reviews = pd.read_csv('data/total_reviews.csv')
   movie_reviews = os.path.join('db/4p/CSV_files', "*_review_noh_1.csv")
-  #action_review_noh_1.csv,adult_review_noh_1.csv,adventure_review_noh_1.csv,animation_review_noh_1.csv,comedy_review_noh_1.csv,crime_review_noh_1.csv,documentary_review_noh_1.csv,drama_review_noh_1.csv,etc_review_noh_1.csv,family_review_noh_1.csv,fantasy_review_noh_1.csv,fear_review_noh_1.csv,history_review_noh_1.csv,melo_review_noh_1.csv,musical_review_noh_1.csv,mystery_review_noh_1.csv,thriller_review_noh_1.csv,war_review_noh_1.csv,western_review_noh_1.csv
+  for i in action_review_noh_1.csv,adult_review_noh_1.csv,adventure_review_noh_1.csv,animation_review_noh_1.csv,comedy_review_noh_1.csv,crime_review_noh_1.csv,documentary_review_noh_1.csv,drama_review_noh_1.csv,etc_review_noh_1.csv,family_review_noh_1.csv,fantasy_review_noh_1.csv,fear_review_noh_1.csv,history_review_noh_1.csv,melo_review_noh_1.csv,musical_review_noh_1.csv,mystery_review_noh_1.csv,thriller_review_noh_1.csv,war_review_noh_1.csv,western_review_noh_1.csv :
+      st.write(i)
   
   #action_review_noh_1.concat
   st.write(movie_reviews)
