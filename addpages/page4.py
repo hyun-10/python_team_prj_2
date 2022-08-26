@@ -34,9 +34,9 @@ def app():
     reader = Reader(line_format=col, sep=',', rating_scale=(0,10))
     
     
-    for i in cursor:
-      data_folds = DatasetAutoFolds(i)
-      st.write(data_folds)
+
+    data_folds = DatasetAutoFolds(cursor)
+
     '''  
     trainset = data_folds.build_full_trainset()
     algo = SVD(n_epochs=5, n_factors=500, random_state=0)
