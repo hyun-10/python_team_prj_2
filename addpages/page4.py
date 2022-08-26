@@ -9,6 +9,15 @@ import pandas as pd
 import numpy as np
 
 def app():
+  import streamlit as st
+  from surprise import SVD
+  from surprise import Dataset
+  from surprise import accuracy
+  from surprise.model_selection import train_test_split
+  from surprise.dataset import DatasetAutoFolds
+  from surprise import Reader
+  import pandas as pd
+  import numpy as np
 
   st.write('page4 영화추천')
   
