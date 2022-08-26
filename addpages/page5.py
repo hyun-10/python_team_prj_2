@@ -29,10 +29,146 @@ def app():
   d9 = pd.read_csv('db/4p/total_reviews_9.csv')
   d10 = pd.read_csv('db/4p/total_reviews_10.csv')
   d12 = pd.concat([d1, d2])
-  st.write(d12)
+  d34 = pd.concat([d3, d4])
+  d56 = pd.concat([d5, d6])
+  d78 = pd.concat([d7, d8])
+  d910 = pd.concayt([d9, d10])
+  d1234 = pd.concat([d12,d34])
+  d5678 = pd.concat([d56,d78])
+  d18 = pd.concat([d1234,d5678])
+  movie_reviews = pd.concat([d18,d910])
+  st.write(movie_reviews)
  
   
+   '''
+  
+  movie_reviews = movie_reviews.astype({'code':'str'})
+  
+  
+  movie_reviews['select_genre'] = movie_reviews['genre'].apply(lambda x : x.split(',')[0])
+  movie_reviews['select_genre'].value_counts()
+  
+  #code = 	'20226579' # 리뷰없음
+  #code = '19190007' # 리뷰있음/드라마 _ 리뷰45개 _ 시각화x
+  #code = '19328008' # 리뷰있음/범죄 _ 리뷰42개  _ 시각화x
+  #code = '19560023' # 리뷰있음/전쟁 _ 리뷰4개 _ 시각화x
+  code = '19770022' # 리뷰있음/SF _ 리뷰32개  _ 시각화x
+  #code = '20119397' # 리뷰있음 / 공연 _ 리뷰356개  _ 시각화o
+  #code = '19900057' # 리뷰있음 / 성인물 _ 리뷰5개 _ 시각화x
+  #code = '20226162' # 리뷰있음/액션  _ 리뷰25개 _ 시각화x
+  #code = '19398001'# 리뷰있음/가족 _ 리뷰390개 _ 시각화o
+  #code = '19428012' # 리뷰있음/코미디 _ 리뷰13개 _ 시각화x
+  #code = '19528001' # 리뷰있음/뮤지컬 _ 리뷰400개  _ 시각화o
+  #code = '19588006' # 리뷰있음/스릴러 _ 리뷰58개  _ 시각화o
+  #code = '20224198' # 리뷰있음/멜로 _ 리뷰40개  _ 시각화x
+  #code = '19598002' # 리뷰있음/애니메이션 _ 리뷰46개  _ 시각화x
+  #code = '20225180' # 리뷰있음/공포 _ 리뷰393개  _ 시각화o
+  #code = '20225750' # 리뷰있음/미스터리 _ 리뷰8개  _ 시각화x
+  #code = '20197434' # 리뷰있음/사극 _ 리뷰3388개  _ 시각화o
+  #code = '19880156' # 리뷰있음/판타지 _ 리뷰258개  _ 시각화o
+  #code = '19518011' #리뷰있음 / 어드벤처 _ 리뷰14개  _ 시각화x
+  #code = '19808231' # 리뷰있음 / 기타 _ 리뷰29개  _ 시각화x
+  #code = '20181795' # 리뷰있음 / 서부극 _ 리뷰6개  _ 시각화x
+  
+  def get_review(query_code,movie_info,movie_reviews):
+    select_movie = movie_info[movie_info['영화코드']==code]
+    select_movie_review = pd.merge(select_movie, movie_reviews, left_on='영화코드', right_on='code', how='left')
+    movie_ = select_movie_review[['영화코드',	'영화이름',	'제작년도',	'상영시간',	'제작상태',	'제작국가',	'장르',	'감독',	'배우',	'스탭수',	'img_url',	'code',	'movie',	'genre']].iloc[0]
+    print(movie_)
+    bool_review = select_movie_review['review']!=select_movie_review['review']
+    if bool_review[0]:
+      print('리뷰가 없습니다.')
+      select_movie_review = np.nan # 시각화하지않기 위한 장치
+    elif len(select_movie_review['review']) <100:
+      print(len(select_movie_review['review']),'개의 리뷰가 있습니다.')
+      select_movie_review = np.nan # 시각화하지않기 위한 장치
+    else :
+      print(len(select_movie_review['review']),'개의 리뷰가 있습니다.')
+    return   select_movie_review
+  st.write(code,movie)
+  st.write(movie_reviews['select_genre'].value_counts())
+  
+  
+  
+  
+ 
+ 
+  
+   
+  
+  def refined_review(review):
+    #세종사전실행
+    okt = Okt()
+    #단어리스트만들기
+    word_list = []
+    word_list = review
+    #형태소분리
+    sentences_tag = []
 
+    for sentence in word_list:
+        morph = okt.pos(sentence)
+        sentences_tag.append(morph)
+    #명사추출
+    noun_list = []
+    for sentence in sentences_tag:
+        for word, tag in sentence:
+            if tag in ["Noun"]:
+                noun_list.append(word)
+    #두글자 이상인 단어만 추출
+    noun_list = [n for n in noun_list if len(n) > 1]
+    #단어별로 개수세기
+    counts = Counter(noun_list)
+    tags = counts.most_common(50)
+    # 일반적인 단어빼기
+    tags=dict(tags)
+    stop_words = ['영화', '감독', '배우', 'ㅋㅋ', 'ㅎㅎ', 'ㅠㅠ', '근데', '진짜']
+
+    for word in stop_words:
+      if word in tags.keys():
+        del tags[word]
+    return tags
+  
+  
+  
+  tags = refined_review(mv_reviews['review'])
+  genre=["가족","공포(호러)","기타","다큐멘터리","드라마","멜로/로맨스","뮤지컬","미스터리","범죄","사극","서부극(웨스턴)","성인물(에로)","스릴러","애니메이션","액션","어드벤처","전쟁","코미디","판타지","SF","공연"]
+  
+  
+  genre_en=["family","fear","etc","documentary","drama","melo","musical","mystery","crime","history","western","adult","thriller","animation","action","adventure","war","comedy","fantasy","sf","performance"]
+  
+  img_path = 'db/4p/genre_imgs'
+  genre_imgs = os.listdir(img_path)
+
+  genre_img_dic={}
+  count=0
+  for i in genre_en:
+    genre_=genre[count]
+    genre_img=[]
+    for j in genre_imgs:
+      if i in j:
+        genre_img.append(j)
+    genre_img_dic[genre_]=genre_img
+    count+=1
+  
+  genre_img_dic
+  
+  def movie_review_wordcloud(mv_reviews,img_path,genre_img_dic):
+    movie_genre = mv_reviews['select_genre'][0]
+    genre_imgurl = img_path+'/'+genre_img_dic[movie_genre][0]
+    custom_mask = np.array(Image.open(genre_imgurl))
+    wordcloud = WordCloud(font_path=fontpath,
+                      background_color='white',width=500, height=500,
+                      max_words=len(tags), mask=custom_mask, # word의 최대 갯수와 마스크, font-size설정
+                      max_font_size=1000)
+    image_colors = ImageColorGenerator(custom_mask)
+    cloud = wordcloud.generate_from_frequencies(dict(tags))
+    plt.figure(figsize=(12,12))
+    plt.axis('off')
+    plt.imshow(cloud.recolor(color_func=image_colors), interpolation='bilinear') # 마스크용 이미지의 색으로 워드클라우드 생성
+    plt.show()
+  
+  st.write(cloud)
+  '''
   
   
   
