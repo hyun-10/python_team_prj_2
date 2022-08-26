@@ -85,7 +85,7 @@ def app():
     user_movie_recomendation_df = user_movie_recomendation_df.set_index('rank')
     user_movie_recomendation_df.sort_index()
     
-  st.write(user_movie_recomendation_df)
+    st.write(user_movie_recomendation_df)
   
   
 
