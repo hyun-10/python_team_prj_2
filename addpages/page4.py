@@ -39,7 +39,7 @@ def app():
   
 
 
-    algo = full_data_learning(genre_)
+    
 
   def mvCd_of_unshow(genre_,puid,punick):
     #data = pd.read_csv(f'db/4p/{genre_}_review_noh_1.db', names=['code','score','raw_user', 'userCd','user_id', 'user_nick', 'movie', 'genre','review'])
@@ -60,6 +60,7 @@ def app():
     isbn_est_list = [(pr.iid, pr.est) for pr in top10_pred]
     return isbn_est_list
   
+  algo = full_data_learning(genre_)
   user_mvrating_est_list = prediction(algo,puid,unshow_mvCd_array)
   user_mvrating_est_list
   
