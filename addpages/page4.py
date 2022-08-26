@@ -28,8 +28,8 @@ def app():
     connect = sqlite3.connect(f'db/4p/{genre_}_review_noh_1.db', isolation_level=None)
     cursor = connect.cursor()
     col = 'item rating user'
-    
-    
+    quary_string = f"select * from {genre_}_review_noh_1 "
+    cursor.execute(quary_string)
 
     data_folds = DatasetAutoFolds(ratings_file=cursor)
     trainset = data_folds.build_full_trainset()
