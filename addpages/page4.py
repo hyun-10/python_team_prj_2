@@ -25,7 +25,7 @@ def app():
 
   
   def full_data_learning(genre_):
-    global data_folds
+
     connect = sqlite3.connect(f'db/4p/{genre_}_review_noh_1.db', isolation_level=None)
     cursor = connect.cursor()
     col = 'item rating user'
@@ -33,7 +33,7 @@ def app():
     #cursor.execute(quary_string)
     reader = Reader(line_format=col, sep=',', rating_scale=(0,10))
     
-    
+    st.write(connect)
 
     data_folds = DatasetAutoFolds(cursor)
 
