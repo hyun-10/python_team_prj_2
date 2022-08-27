@@ -12,12 +12,12 @@ import sqlite3
 def app():
   #genre_='fantasy'
   genre_ = st.multiselect(['family'['performance' ,'horror','etc','documentary','drama','melodrama','musical','mystery','crime','historical','western','adult','thriller','animated','action','adventure','war','comedy','fantasy']
-  #puid= 'adiv****'
-  id = st.text_input("")
-  puid=id                     
-  #punick= '푸른불'
-  input = st.text_input("")
-  punick = input
+  puid= 'adiv****'
+  
+                    
+  punick= '푸른불'
+
+
   puid=puid[0:4]+'****'
 
   def full_data_learning(genre_):
