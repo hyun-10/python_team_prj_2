@@ -11,13 +11,13 @@ import sqlite3
 
 def app():
   #genre_='fantasy'
-  genre_ = st.selectbox('장르를 선택하세요',('family','performance' ,'horror','etc','documentary','drama','melodrama','musical','mystery','crime','historical','western','adult','thriller','animated','action','adventure','war','comedy','fantasy'))
+  genre_ = st.selectbox('장르를 선택하세요',('','family','performance' ,'horror','etc','documentary','drama','melodrama','musical','mystery','crime','historical','western','adult','thriller','animated','action','adventure','war','comedy','fantasy'))
   genre_ = genre_
   #puid= 'adiv****'
-  puid = st.text_input('', key=1)
+  puid = st.text_input('아이디를 입력하세요','', key=1)
                     
   #punick= '푸른불'
-  punick = st.text_input('',key=2)
+  punick = st.text_input('닉네임을 입력하세요','',key=2)
 
   puid=puid[0:4]+'****'
 
