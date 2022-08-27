@@ -24,7 +24,7 @@ def app():
   def full_data_learning(genre_):
     col = 'item rating user'
     reader = Reader(line_format=col, sep=',', rating_scale=(0,10))
-    
+    '''
     total = []
     number = 1
     while True :
@@ -35,12 +35,12 @@ def app():
             break
         number += 1
     tod = pd.concat(total, ignore_index=True)
+    '''
+    data_folds = DatasetAutoFolds(ratings_file=f'db/4p/{genre_}_review_noh_1.csv', reader=reader)
     
-    #data_folds = DatasetAutoFolds(ratings_file=f'db/4p/{genre_}_review_noh_1.csv', reader=reader)
     
-    
-    #trainset = data_folds.build_full_trainset()
-    trainset = tod
+    trainset = data_folds.build_full_trainset()
+    trainset = 
     algo = SVD(n_epochs=5, n_factors=500, random_state=0)
     algo.fit(trainset)
     return algo
