@@ -11,7 +11,7 @@ import sqlite3
 
 def app():
   #genre_='fantasy'
-  genre_ = st.multiselect(['family','performance' ,'horror','etc','documentary','drama','melodrama','musical','mystery','crime','historical','western','adult','thriller','animated','action','adventure','war','comedy','fantasy'],options)
+  genre_ = st.multiselect(['family','performance' ,'horror','etc','documentary','drama','melodrama','musical','mystery','crime','historical','western','adult','thriller','animated','action','adventure','war','comedy','fantasy'])
 
   #puid= 'adiv****'
   puid = st.text_input('')
