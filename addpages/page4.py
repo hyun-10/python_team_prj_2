@@ -29,7 +29,7 @@ def app():
     number = 1
     while True :
         try :
-            datas = pd.read_csv(f'db/4p/{genre_}_review_noh_{str(number}.csv', header=None, index_col=False)
+            datas = pd.read_csv(f'db/4p/{genre_}_review_noh_{str(number)}.csv', header=None, index_col=False)
             total.append(datas)
         except :
             break
