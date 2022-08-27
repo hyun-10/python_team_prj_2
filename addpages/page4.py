@@ -40,10 +40,9 @@ def app():
     
     
     trainset = data_folds.build_full_trainset()
-    st.write(trainset)
-    
+    st.write(trainset.shape)
     algo = SVD(n_epochs=5, n_factors=500, random_state=0)
-    algo.fit(trainset.shape)
+    algo.fit(trainset)
     return algo
     
 
