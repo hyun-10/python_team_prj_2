@@ -13,10 +13,11 @@ def app():
   #genre_='fantasy'
   genre_ = st.multiselect(['family'['performance' ,'horror','etc','documentary','drama','melodrama','musical','mystery','crime','historical','western','adult','thriller','animated','action','adventure','war','comedy','fantasy']
   #puid= 'adiv****'
-  puid = st.text_input("")
+  id = st.text_input("")
+  puid=id                     
   #punick= '푸른불'
-  punick = st.text_input("")
-
+  input = st.text_input("")
+  punick = input
   puid=puid[0:4]+'****'
 
   def full_data_learning(genre_):
