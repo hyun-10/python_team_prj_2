@@ -13,9 +13,9 @@ def app():
   #genre_='fantasy'
   genre_ = st.multiselect(['family'['performance' ,'horror','etc','documentary','drama','melodrama','musical','mystery','crime','historical','western','adult','thriller','animated','action','adventure','war','comedy','fantasy']
   #puid= 'adiv****'
-  puid = st.text_input(value="")
+  st.text_input(value="")
   #punick= '푸른불'
-  punick = st.text_input(value="")
+  st.text_input(value="")
   
   puid=puid[0:4]+'****'
 
