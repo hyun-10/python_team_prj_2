@@ -12,7 +12,7 @@ import sqlite3
 def app():
   #genre_='fantasy'
   genre_ = st.selectbox('장르를 선택하세요',['family','performance' ,'horror','etc','documentary','drama','melodrama','musical','mystery','crime','historical','western','adult','thriller','animated','action','adventure','war','comedy','fantasy'])
-  #genre_.strip([])
+  genre_ = genre_
   #puid= 'adiv****'
   puid = st.text_input('', key=1)
                     
