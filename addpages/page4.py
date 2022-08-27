@@ -37,9 +37,11 @@ def app():
     tod = pd.concat(total, ignore_index=True)
     '''
     data_folds = DatasetAutoFolds(ratings_file=f'db/4p/{genre_}_review_noh_1.csv', reader=reader)
-    st.write(data_folds)
-    '''
+    
+    
     trainset = data_folds.build_full_trainset()
+    st.write(trainset)
+    '''
     algo = SVD(n_epochs=5, n_factors=500, random_state=0)
     algo.fit(trainset)
     return algo
