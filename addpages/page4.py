@@ -10,58 +10,34 @@ import numpy as np
 import sqlite3
 
 def app():
-
-  genre_ = st.selectbox('장르를 선택하세요',('','family','performance' ,'horror','etc','documentary','drama','melodrama','musical','mystery','crime','historical','western','adult','thriller','animated','action','adventure','war','comedy','fantasy'))
-
-
-  puid = st.text_input('adiv****','', key=1)
+  #genre_='fantasy'
+  genre_ = st.selectbox('장르를 선택하세요',('family','performance' ,'horror','etc','documentary','drama','melodrama','musical','mystery','crime','historical','western','adult','thriller','animated','action','adventure','war','comedy','fantasy'))
+  genre_ = genre_
+  #puid= 'adiv****'
+  puid = st.text_input('', key=1)
                     
-
-  punick = st.text_input('푸른불','',key=2)
+  #punick= '푸른불'
+  punick = st.text_input('',key=2)
 
   puid=puid[0:4]+'****'
 
   def full_data_learning(genre_):
     col = 'item rating user'
     reader = Reader(line_format=col, sep=',', rating_scale=(0,10))
-    '''
-    total = []
-    number = 1
-    while True :
-        try :
-            datas = pd.read_csv(f'db/4p/{genre_}_review_noh_{str(number)}.csv', header=None, index_col=False)
-            total.append(datas)
-        except :
-            break
-        number += 1
-    tod = pd.concat(total, ignore_index=True)
-    '''
+#    total = []
+#    number = 1
+#    while True :
+#        datas = pd.read_csv(f'db/4p/{genre_}_review_noh_1.csv'
     data_folds = DatasetAutoFolds(ratings_file=f'db/4p/{genre_}_review_noh_1.csv', reader=reader)
-    
-    
     trainset = data_folds.build_full_trainset()
-
     algo = SVD(n_epochs=5, n_factors=500, random_state=0)
     algo.fit(trainset)
     return algo
-    
 
   algo = full_data_learning(genre_)
   
   def mvCd_of_unshow(genre_,puid,punick):
-    total = []
-    number = 1
-    while True :
-        try :
-            datas = pd.read_csv(f'db/4p/{genre_}_review_noh_{str(number)}.csv', 
-            names=['code','score','raw_user', 'userCd','user_id', 'user_nick', 'movie', 'genre','review'])
-            total.append(datas)
-        except :
-            break
-        number += 1
-    data = pd.concat(total, ignore_index=True)
-    print(genre_," : ",len(data))
-    #data = pd.read_csv(f'db/4p/{genre_}_review_noh_1.csv', names=['code','score','raw_user', 'userCd','user_id', 'user_nick', 'movie', 'genre','review'])
+    data = pd.read_csv(f'db/4p/{genre_}_review_noh_1.csv', names=['code','score','raw_user', 'userCd','user_id', 'user_nick', 'movie', 'genre','review'])
     str_expr = '(user_id == @puid) and (user_nick == @punick)'
     total = data.code.unique()
     query = data.query(str_expr)['code'].unique()
@@ -118,9 +94,3 @@ def app():
   user_movie_recomendation_df_.sort_index()
   st.dataframe(user_movie_recomendation_df_)
   '''
-  
-  
-  
-  
-  
- 
