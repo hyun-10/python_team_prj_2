@@ -10,9 +10,12 @@ import numpy as np
 import sqlite3
 
 def app():
-  genre_='fantasy'
-  puid= 'adiv****'
-  punick= '푸른불'
+  #genre_='fantasy'
+  genre_ = st.multiselect(['family'['performance' ,'horror','etc','documentary','drama','melodrama','musical','mystery','crime','historical','western','adult','thriller','animated','action','adventure','war','comedy','fantasy']
+  #puid= 'adiv****'
+  puid = st.text_input(value="")
+  #punick= '푸른불'
+  punick = st.text_input(value="")
   
   puid=puid[0:4]+'****'
 
@@ -69,7 +72,7 @@ def app():
   user_movie_recomendation_df = user_movie_recomendation_df.set_index('rank')
   st.dataframe(user_movie_recomendation_df.sort_index())
   
-  
+  '''
   genre_='fantasy'
   puid= 'adiv****'
   punick= '푸른불'
@@ -84,7 +87,7 @@ def app():
   user_movie_recomendation_df_ = user_movie_recomendation_df.set_index('rank')
   user_movie_recomendation_df_.sort_index()
   st.dataframe(user_movie_recomendation_df_)
-  
+  '''
   
   
   
