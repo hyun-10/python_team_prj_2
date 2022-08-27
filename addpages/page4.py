@@ -60,6 +60,7 @@ def app():
             break
         number += 1
     data = pd.concat(total, ignore_index=True)
+    print(genre_," : ",len(data))
     #data = pd.read_csv(f'db/4p/{genre_}_review_noh_1.csv', names=['code','score','raw_user', 'userCd','user_id', 'user_nick', 'movie', 'genre','review'])
     str_expr = '(user_id == @puid) and (user_nick == @punick)'
     total = data.code.unique()
