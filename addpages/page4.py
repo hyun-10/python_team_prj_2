@@ -11,7 +11,7 @@ import sqlite3
 
 def app():
   #genre_='fantasy'
-  genre_ = st.selectbox('장르를 선택하세요',['family','performance' ,'horror','etc','documentary','drama','melodrama','musical','mystery','crime','historical','western','adult','thriller','animated','action','adventure','war','comedy','fantasy'])
+  genre_ = st.selectbox('장르를 선택하세요',('family','performance' ,'horror','etc','documentary','drama','melodrama','musical','mystery','crime','historical','western','adult','thriller','animated','action','adventure','war','comedy','fantasy'))
   genre_ = genre_
   #puid= 'adiv****'
   puid = st.text_input('', key=1)
@@ -24,7 +24,7 @@ def app():
   def full_data_learning(genre_):
     col = 'item rating user'
     reader = Reader(line_format=col, sep=',', rating_scale=(0,10))
-    data_folds = DatasetAutoFolds(ratings_file=f'db/4p/{genre_}_review_noh_1.csv'.strip([]), reader=reader)
+    data_folds = DatasetAutoFolds(ratings_file=f'db/4p/{genre_}_review_noh_1.csv', reader=reader)
     trainset = data_folds.build_full_trainset()
     algo = SVD(n_epochs=5, n_factors=500, random_state=0)
     algo.fit(trainset)
