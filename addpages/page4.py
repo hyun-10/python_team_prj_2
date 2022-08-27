@@ -43,7 +43,7 @@ def app():
     st.write(trainset)
     '''
     algo = SVD(n_epochs=5, n_factors=500, random_state=0)
-    algo.fit(trainset)
+    algo.fit(trainset.shape)
     return algo
     '''
 
