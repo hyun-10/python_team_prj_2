@@ -54,7 +54,7 @@ def app():
     number = 1
     while True :
         try :
-            datas = pd.read_csv(f'db/4p/{genre_}_review_noh_{str(number}.csv', 
+            datas = pd.read_csv(f'db/4p/{genre_}_review_noh_{str(number)}.csv', 
             names=['code','score','raw_user', 'userCd','user_id', 'user_nick', 'movie', 'genre','review'])
             total.append(datas)
         except :
