@@ -165,16 +165,16 @@ def app():
     col1, col2, col3, col4, col5= st.columns(5)
 
     col_list=[col1,col2,col3,col4,col5]
-
+    index = ['index_1_', 'index_2_', 'index_3_', 'index_4_', 'index_5_']
     j=0
-    for i in range(0,6):
+    for i in index:
         with col_list[j]:
             
-            st.image(index_,i,_img_url)
-            st.write(index_,i,_movieNm)
-            st.write(index_,i,_gene)
-            st.write(index_,i,_directors)
-            st.write(index_,i,_actors)
+            st.image(index,img_url)
+            st.write(index,movieNm)
+            st.write(index,gene)
+            st.write(index,directors)
+            st.write(index,actors)
             j +=1
 
     col6, col7, col8, col9, col10 = st.columns(5)
