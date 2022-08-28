@@ -100,7 +100,9 @@ def app():
     #st.image(index_1[0]['img_url'])
     
     st.image(index_1.iloc[0]['img_url'])
-    st.write(index_1_gene)
-    st.write(index_1_actors)
-    st.write(index_1_directors)
     st.write(index_1_movieNm)
+    st.write(index_1_gene)
+    st.write(index_1_directors)
+    st.write(index_1_actors)
+    
+    
