@@ -88,11 +88,10 @@ def app():
   st.write(movie_reviews)
   st.write(mv_reviews)
   
-''' 
+
  
   
    
-  
   def refined_review(review):
     #세종사전실행
     okt = Okt()
@@ -165,6 +164,6 @@ def app():
     plt.show()
   
   st.write(cloud)
-'''
+
  
  
