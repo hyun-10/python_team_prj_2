@@ -175,7 +175,7 @@ def app():
             st.write(index_1_gene)
             st.write(index_1_directors)
             st.write(index_1_actors)
-            j +=1
+        j +=1
 
     col6, col7, col8, col9, col10 = st.columns(5)
     col_list_2=[col6, col7, col8, col9, col10]
@@ -188,7 +188,7 @@ def app():
             st.write(index_1_gene)
             st.write(index_1_directors)
             st.write(index_1_actors)
-            a +=1
+        a +=1
 
     
     
