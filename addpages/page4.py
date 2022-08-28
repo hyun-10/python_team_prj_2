@@ -86,23 +86,78 @@ def app():
     index_1_directors = index_1.iloc[0]['감독']
     index_1_actors = index_1.iloc[0]['배우']
     index_1_img_url = index_1.iloc[0]['img_url']
+    
     index_2 = user_movie_recomendation_df.loc[[2],:]
+    index_2_movieNm = index_2.iloc[0]['영화이름']
+    index_2_gene = index_2.iloc[0]['장르']
+    index_2_directors = index_2.iloc[0]['감독']
+    index_2_actors = index_2.iloc[0]['배우']
+    index_2_img_url = index_2.iloc[0]['img_url']
+    
     index_3 = user_movie_recomendation_df.loc[[3],:]
+    index_3_movieNm = index_3.iloc[0]['영화이름']
+    index_3_gene = index_3.iloc[0]['장르']
+    index_3_directors = index_3.iloc[0]['감독']
+    index_3_actors = index_3.iloc[0]['배우']
+    index_3_img_url = index_3.iloc[0]['img_url']
+    
     index_4 = user_movie_recomendation_df.loc[[4],:]
+    index_4_movieNm = index_4.iloc[0]['영화이름']
+    index_4_gene = index_4.iloc[0]['장르']
+    index_4_directors = index_4.iloc[0]['감독']
+    index_4_actors = index_4.iloc[0]['배우']
+    index_4_img_url = index_4.iloc[0]['img_url']
+    
     index_5 = user_movie_recomendation_df.loc[[5],:]
+    index_5_movieNm = index_5.iloc[0]['영화이름']
+    index_5_gene = index_5.iloc[0]['장르']
+    index_5_directors = index_5.iloc[0]['감독']
+    index_5_actors = index_5.iloc[0]['배우']
+    index_5_img_url = index_5.iloc[0]['img_url']
+    
     index_6 = user_movie_recomendation_df.loc[[6],:]
+    index_6_movieNm = index_6.iloc[0]['영화이름']
+    index_6_gene = index_6.iloc[0]['장르']
+    index_6_directors = index_6.iloc[0]['감독']
+    index_6_actors = index_6.iloc[0]['배우']
+    index_6_img_url = index_6.iloc[0]['img_url']
+    
     index_7 = user_movie_recomendation_df.loc[[7],:]
+    index_7_movieNm = index_7.iloc[0]['영화이름']
+    index_7_gene = index_7.iloc[0]['장르']
+    index_7_directors = index_7.iloc[0]['감독']
+    index_7_actors = index_7.iloc[0]['배우']
+    index_7_img_url = index_7.iloc[0]['img_url']
+    
     index_8 = user_movie_recomendation_df.loc[[8],:]
+    index_8_movieNm = index_8.iloc[0]['영화이름']
+    index_8_gene = index_8.iloc[0]['장르']
+    index_8_directors = index_8.iloc[0]['감독']
+    index_8_actors = index_8.iloc[0]['배우']
+    index_8_img_url = index_8.iloc[0]['img_url']
+    
     index_9 = user_movie_recomendation_df.loc[[9],:]
+    index_9_movieNm = index_9.iloc[0]['영화이름']
+    index_9_gene = index_9.iloc[0]['장르']
+    index_9_directors = index_9.iloc[0]['감독']
+    index_9_actors = index_9.iloc[0]['배우']
+    index_9_img_url = index_9.iloc[0]['img_url']
+    
     index_10 = user_movie_recomendation_df.loc[[10],:]
+    index_10_movieNm = index_10.iloc[0]['영화이름']
+    index_10_gene = index_10.iloc[0]['장르']
+    index_10_directors = index_10.iloc[0]['감독']
+    index_10_actors = index_10.iloc[0]['배우']
+    index_10_img_url = index_10.iloc[0]['img_url']
+    
     
     st.write(index_1)
     #st.image(index_1[0]['img_url'])
     
-    st.image(index_1.iloc[0]['img_url'])
-    st.write(index_1_movieNm)
-    st.write(index_1_gene)
-    st.write(index_1_directors)
-    st.write(index_1_actors)
+    st.image(index_10.iloc[0]['img_url'])
+    st.write(index_10_movieNm)
+    st.write(index_10_gene)
+    st.write(index_10_directors)
+    st.write(index_10_actors)
     
     
