@@ -227,6 +227,43 @@ def app():
       st.write(index_5_directors)
       st.write(index_5_actors)
       
+    col6, col7, col8, col9, col10= st.columns(5)
+    with col6:
+      st.image(index_6_img_url)
+      st.write(index_6_movieNm)
+      st.write(index_6_gene)
+      st.write(index_6_directors)
+      st.write(index_6_actors)
+      
+    with col7:
+      st.image(index_7_img_url)
+      st.write(index_7_movieNm)
+      st.write(index_7_gene)
+      st.write(index_7_directors)
+      st.write(index_7_actors)
+      
+    with col8:
+      st.image(index_8_img_url)
+      st.write(index_8_movieNm)
+      st.write(index_8_gene)
+      st.write(index_8_directors)
+      st.write(index_8_actors)
+      
+    with col9:
+      st.image(index_9_img_url)
+      st.write(index_9_movieNm)
+      st.write(index_9_gene)
+      st.write(index_9_directors)
+      st.write(index_9_actors)
+      
+    with col10:
+      st.image(index_10_img_url)
+      st.write(index_10_movieNm)
+      st.write(index_10_gene)
+      st.write(index_10_directors)
+      st.write(index_10_actors)
+      
+
       
     
     
