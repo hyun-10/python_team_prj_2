@@ -80,6 +80,7 @@ def app():
 
     user_movie_recomendation_df = user_movie_recomendation_df.set_index('rank')
     st.dataframe(user_movie_recomendation_df.sort_index())
+    st.wtire(ursr_movie_recomendataion_df.iloc[[1]]
   
   '''
   genre_='fantasy'
