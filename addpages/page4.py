@@ -80,4 +80,16 @@ def app():
 
     user_movie_recomendation_df = user_movie_recomendation_df.set_index('rank')
     st.dataframe(user_movie_recomendation_df.sort_index())
-    st.dataframe(user_movie_recomendation_df.loc[[1],:])
+    index_1 = dataframe(user_movie_recomendation_df.loc[[1],:])
+    index_2 = dataframe(user_movie_recomendation_df.loc[[2],:])
+    index_3 = dataframe(user_movie_recomendation_df.loc[[3],:])
+    index_4 = dataframe(user_movie_recomendation_df.loc[[4],:])
+    index_5 = dataframe(user_movie_recomendation_df.loc[[5],:])
+    index_6 = dataframe(user_movie_recomendation_df.loc[[6],:])
+    index_7 = dataframe(user_movie_recomendation_df.loc[[7],:])
+    index_8 = dataframe(user_movie_recomendation_df.loc[[8],:])
+    index_9 = dataframe(user_movie_recomendation_df.loc[[9],:])
+    index_10 = dataframe(user_movie_recomendation_df.loc[[10],:])
+    
+    st.write(dataframe(user_movie_recomendation_df.loc[[1],:])
+    
