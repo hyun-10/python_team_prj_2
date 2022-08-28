@@ -170,7 +170,7 @@ def app():
 
     for i in index_list:
         with col_list[j]:
-            st.image(i.iloc[0]['img_url'])
+            st.image(i_img_url)
             st.write(i_movieNm)
             st.write(i_gene)
             st.write(i_directors)
