@@ -167,27 +167,27 @@ def app():
     col_list=[col1,col2,col3,col4,col5]
 
     j=0
-    for i in range(1,5):
+    for i in range(1,6):
         with col_list[j]:
 
-            st.image(index_1_img_url)
-            st.write(index_1_movieNm)
-            st.write(index_1_gene)
-            st.write(index_1_directors)
-            st.write(index_1_actors)
+            st.image(index_10_img_url)
+            st.write(index_10_movieNm)
+            st.write(index_10_gene)
+            st.write(index_10_directors)
+            st.write(index_10_actors)
         j +=1
 
     col6, col7, col8, col9, col10 = st.columns(5)
     col_list_2=[col6, col7, col8, col9, col10]
 
     a=0
-    for k in range(6,10):
+    for k in range(6,11):
         with col_list_2[a]:
-            st.image(index_1_img_url)
-            st.write(index_1_movieNm)
-            st.write(index_1_gene)
-            st.write(index_1_directors)
-            st.write(index_1_actors)
+            st.image(index_8_img_url)
+            st.write(index_8_movieNm)
+            st.write(index_8_gene)
+            st.write(index_8_directors)
+            st.write(index_8_actors)
         a +=1
 
     
