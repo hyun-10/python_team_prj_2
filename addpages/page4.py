@@ -79,5 +79,5 @@ def app():
     user_movie_recomendation_df = get_recomendationmovie(user_mvrating_est_list)
 
     user_movie_recomendation_df = user_movie_recomendation_df.set_index('rank')
-    #st.dataframe(user_movie_recomendation_df.sort_index())
+    st.dataframe(user_movie_recomendation_df.sort_index())
     st.dataframe(user_movie_recomendation_df.loc[[1],:])
