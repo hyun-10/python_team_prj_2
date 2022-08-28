@@ -90,6 +90,6 @@ def app():
     index_8 = dataframe(user_movie_recomendation_df.loc[[8],:])
     index_9 = dataframe(user_movie_recomendation_df.loc[[9],:])
     index_10 = dataframe(user_movie_recomendation_df.loc[[10],:])
-    st.write(index_1)
+    st.dataframe(index_1)
     st.write(index_1.loc[3])
     
