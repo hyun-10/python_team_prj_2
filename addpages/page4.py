@@ -183,7 +183,7 @@ def app():
     a=0
     for k in range(6,11):
         with col_list_2[a]:
-            st.image(f'index_{k}_img_url')
+            st.image(index_{k}_img_url)
             st.write(index_8_movieNm)
             st.write(index_8_gene)
             st.write(index_8_directors)
