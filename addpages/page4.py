@@ -81,7 +81,7 @@ def app():
     user_movie_recomendation_df = user_movie_recomendation_df.set_index('rank')
     st.dataframe(user_movie_recomendation_df.sort_index())
     index_1 = user_movie_recomendation_df.loc[[1],:]
-    ideex_1_movieNm = index_1.iloc[0]['영화이름']
+    index_1_movieNm = index_1.iloc[0]['영화이름']
     index_1_gene = index_1.iloc[0]['장르']
     index_1_directors = index_1.iloc[0]['감독']
     index_1_actors = index_1.iloc[0]['배우']
@@ -100,7 +100,7 @@ def app():
     #st.image(index_1[0]['img_url'])
     
     st.image(index_1.iloc[0]['img_url'])
-    st.write(index_1_actors)
     st.write(index_1_gene)
     st.write(index_1_actors)
+    st.write(index_1_directors)
     st.write(index_1_movieNm)
