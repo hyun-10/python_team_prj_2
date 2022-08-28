@@ -91,5 +91,5 @@ def app():
     index_9 = dataframe(user_movie_recomendation_df.loc[[9],:])
     index_10 = dataframe(user_movie_recomendation_df.loc[[10],:])
     
-    st.write(user_movie_recomendation_df.loc[[1]],:3)
+    st.write(user_movie_recomendation_df.loc[[1],:3])
     
