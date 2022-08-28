@@ -166,7 +166,7 @@ def app():
     col_list=[col1,col2,col3,col4,col5]
     j=0
     i=1
-    for i in 5:
+    for a in range(5):
         with col_list[j]:
             st.image("index_f'{i}'.iloc[0]['img_url']")
             st.write("index_f'{i}'_movieNm")
