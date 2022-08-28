@@ -161,6 +161,7 @@ def app():
     #st.write(index_10_directors)
     #st.write(index_10_actors)
     
+    st.writeuser_movie_recomendation_df.loc[[1:5],:]
     
     col1, col2, col3, col4, col5= st.columns(5)
 
@@ -183,7 +184,7 @@ def app():
     a=0
     for k in range(6,11):
         with col_list_2[a]:
-            st.image(index_{k}_img_url)
+            st.image(index_8_img_url)
             st.write(index_8_movieNm)
             st.write(index_8_gene)
             st.write(index_8_directors)
