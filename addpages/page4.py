@@ -83,7 +83,7 @@ def app():
     index_1 = user_movie_recomendation_df.loc[[1],:]
     index_2 = user_movie_recomendation_df.loc[[2],:]
     index_3 = user_movie_recomendation_df.loc[[3],:]
-    index_4 = user_movie_recomendation_df.loc[[4],:])
+    index_4 = user_movie_recomendation_df.loc[[4],:]
     index_5 = user_movie_recomendation_df.loc[[5],:]
     index_6 = user_movie_recomendation_df.loc[[6],:]
     index_7 = user_movie_recomendation_df.loc[[7],:]
