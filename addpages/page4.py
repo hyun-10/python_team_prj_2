@@ -151,7 +151,7 @@ def app():
     index_10_actors = index_10.iloc[0]['배우']
     index_10_img_url = index_10.iloc[0]['img_url']
     
-    st.write(punick,'님을 위한',genre_'영화목록입니다.')
+    st.write(punick,'님을 위한',genre_,'영화목록입니다.')
     st.write(index_10)
     #st.image(index_1[0]['img_url'])
     
