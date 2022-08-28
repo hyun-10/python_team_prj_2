@@ -170,11 +170,11 @@ def app():
     for i in range(1,6):
         with col_list[j]:
             a=1
-            st.image(f'index_{a}_img_url')
-            st.write('index_1_movieNm')
-            st.write('index_1_gene')
-            st.write('index_1_directors')
-            st.write('index_1_actors')
+            st.image(index_1_img_url)
+            st.write(index_1_movieNm)
+            st.write(index_1_gene)
+            st.write(index_1_directors)
+            st.write(index_1_actors)
             j +=1
 
     col6, col7, col8, col9, col10 = st.columns(5)
