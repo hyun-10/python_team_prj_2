@@ -191,7 +191,7 @@ def app():
             st.write(index_8_actors)
         a +=1
     '''
-    
+    col1, col2, col3, col4, col5= st.columns(5)
     with col1:
       st.image(index_1_img_url)
       st.write(index_1_movieNm)
