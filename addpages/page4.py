@@ -1,4 +1,3 @@
-<your-custom-subdomain>.acorn_python_prj
 import streamlit as st
 from surprise import SVD
 from surprise import Dataset
