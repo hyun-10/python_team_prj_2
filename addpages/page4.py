@@ -81,6 +81,3 @@ def app():
     user_movie_recomendation_df = user_movie_recomendation_df.set_index('rank')
     st.dataframe(user_movie_recomendation_df.sort_index())
     st.dataframe(ursr_movie_recomendataion_df.iloc[[1]]
-  
-
-  
