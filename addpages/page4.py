@@ -167,7 +167,7 @@ def app():
     col_list=[col1,col2,col3,col4,col5]
 
     j=0
-    for i in range(1,6):
+    for i in range(1,5):
         with col_list[j]:
 
             st.image(index_1_img_url)
@@ -181,7 +181,7 @@ def app():
     col_list_2=[col6, col7, col8, col9, col10]
 
     a=0
-    for k in range(5,11):
+    for k in range(6,10):
         with col_list_2[a]:
             st.image(index_1_img_url)
             st.write(index_1_movieNm)
