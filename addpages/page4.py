@@ -86,6 +86,7 @@ def app():
     index_1_directors = index_1.iloc[0]['감독']
     index_1_actors = index_1.iloc[0]['배우']
     index_1_img_url = index_1.iloc[0]['img_url']
+
     
     index_2 = user_movie_recomendation_df.loc[[2],:]
     index_2_movieNm = index_2.iloc[0]['영화이름']
@@ -167,13 +168,13 @@ def app():
     index_list=[index_1_, index_2_, index_3_, index_4_, index_5_]
     j=0
 
-    for a in index_list:
+    for i in range(1,6):
         with col_list[j]:
-            st.image(f{'a'}.iloc[0]['img_url'])
-            st.write(f{'a'}movieNm)
-            st.write(f{'a'}gene)
-            st.write(f{'a'}directors)
-            st.write(f{'a'}actors)
+            st.image(index_f'{i}'.iloc[0]['img_url'])
+            st.write(index_f'{i}'_movieNm)
+            st.write(index_f'{i}'_gene)
+            st.write(index_f'{i}'_directors)
+            st.write(index_f'{i}'_actors)
             j +=1
 
     
