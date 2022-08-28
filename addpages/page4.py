@@ -94,5 +94,5 @@ def app():
     st.write(index_1)
     #st.image(index_1[0]['img_url'])
     
-    st.image(index_1.iloc[0]['img_url'])
+    st.write(index_1.iloc[0]['img_url'])
     
