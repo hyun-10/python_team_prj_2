@@ -1,9 +1,9 @@
 import streamlit as st
 import sqlite3
 
-st.write('8/24일기준')
+
 def app():
-  
+  st.write('8/24일기준')
   connect = sqlite3.connect('db/1p/box.db', isolation_level=None)
   cursor = connect.cursor();
   
