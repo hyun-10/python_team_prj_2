@@ -165,9 +165,8 @@ def app():
     col1, col2, col3, col4, col5= st.columns(5)
 
     col_list=[col1,col2,col3,col4,col5]
-    index_list=[index_1_, index_2_, index_3_, index_4_, index_5_]
-    j=0
 
+    j=0
     for i in index_list:
         with col_list[j]:
             st.image(index_1_img_url)
