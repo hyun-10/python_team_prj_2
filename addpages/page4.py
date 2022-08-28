@@ -168,11 +168,11 @@ def app():
     i=1
     for i in 5:
         with col_list[j]:
-            st.image(index_f'{i}'.iloc[0]['img_url'])
-            st.write(index_f'{i}'_movieNm)
-            st.write(index_f'{i}'_gene)
-            st.write(index_f'{i}'_directors)
-            st.write(index_f'{i}'_actors)
+            st.image("index_f'{i}'.iloc[0]['img_url']")
+            st.write("index_f'{i}'_movieNm")
+            st.write("index_f'{i}'_gene")
+            st.write("index_f'{i}'_directors")
+            st.write("index_f'{i}'_actors")
             j +=1
             i +=1
     
