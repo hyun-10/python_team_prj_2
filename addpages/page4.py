@@ -79,7 +79,7 @@ def app():
     user_movie_recomendation_df = get_recomendationmovie(user_mvrating_est_list)
 
     user_movie_recomendation_df = user_movie_recomendation_df.set_index('rank')
-    st.dataframe(user_movie_recomendation_df.sort_index())
+    #st.dataframe(user_movie_recomendation_df.sort_index())# 영화 추천 순위
     index_1 = user_movie_recomendation_df.loc[[1],:]
     index_1_movieNm = index_1.iloc[0]['영화이름']
     index_1_gene = index_1.iloc[0]['장르']
