@@ -171,4 +171,11 @@ def app():
             st.write(f"index_{i}_gene")
             st.write(f"index_{i}_directors")
             st.write(f"index_{i}_actors")
+    for i in range(1,6):
+        with col_list[i]:
+            st.image(index_1.iloc[0]['img_url'])
+            st.write(index_1_movieNm)
+            st.write(index_1_gene)
+            st.write(index_1_directors)
+            st.write(index_1_actors)
     
