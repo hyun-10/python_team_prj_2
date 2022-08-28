@@ -152,14 +152,14 @@ def app():
     index_10_img_url = index_10.iloc[0]['img_url']
     
     st.write(punick,'님을 위한',genre_,'영화목록입니다.')
-    st.write(index_10)
+    #st.write(index_10)
     #st.image(index_1[0]['img_url'])
     
-    st.image(index_10.iloc[0]['img_url'])
-    st.write(index_10_movieNm)
-    st.write(index_10_gene)
-    st.write(index_10_directors)
-    st.write(index_10_actors)
+    #st.image(index_10.iloc[0]['img_url'])
+    #st.write(index_10_movieNm)
+    #st.write(index_10_gene)
+    #st.write(index_10_directors)
+    #st.write(index_10_actors)
     
     
     col1, col2, col3, col4, col5= st.columns(5)
