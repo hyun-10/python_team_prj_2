@@ -181,7 +181,7 @@ def app():
     col_list_2=[col6, col7, col8, col9, col10]
     a=0
     for i in range(5):
-        with col_list[a]:
+        with col_list_2[a]:
             
             st.image(index_1_img_url)
             st.write(index_1_movieNm)
