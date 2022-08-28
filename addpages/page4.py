@@ -151,7 +151,7 @@ def app():
     index_10_img_url = index_10.iloc[0]['img_url']
     
     
-    st.write(index_1)
+    st.write(index_10)
     #st.image(index_1[0]['img_url'])
     
     st.image(index_10.iloc[0]['img_url'])
