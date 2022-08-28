@@ -151,7 +151,7 @@ def app():
     index_10_actors = index_10.iloc[0]['배우']
     index_10_img_url = index_10.iloc[0]['img_url']
     
-    
+    st.write(punick,'님을 위한',genre_'영화목록입니다.')
     st.write(index_10)
     #st.image(index_1[0]['img_url'])
     
@@ -167,27 +167,27 @@ def app():
     col_list=[col1,col2,col3,col4,col5]
 
     j=0
-    for i in range(5):
+    for i in range(0,6):
         with col_list[j]:
             
-            st.image(index_1_img_url)
-            st.write(index_1_movieNm)
-            st.write(index_1_gene)
-            st.write(index_1_directors)
-            st.write(index_1_actors)
+            st.image(index_,i,_img_url)
+            st.write(index_,i,_movieNm)
+            st.write(index_,i,_gene)
+            st.write(index_,i,_directors)
+            st.write(index_,i,_actors)
             j +=1
 
     col6, col7, col8, col9, col10 = st.columns(5)
     col_list_2=[col6, col7, col8, col9, col10]
     a=0
-    for i in range(5):
+    for b in range(5,11):
         with col_list_2[a]:
             
-            st.image(index_1_img_url)
-            st.write(index_1_movieNm)
-            st.write(index_1_gene)
-            st.write(index_1_directors)
-            st.write(index_1_actors)
+            st.image(index_,b,_img_url)
+            st.write(index_,b,_movieNm)
+            st.write(index_,b,_gene)
+            st.write(index_,b,_directors)
+            st.write(index_,b,_actors)
             a +=1   
     
     
