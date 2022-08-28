@@ -91,5 +91,5 @@ def app():
     index_9 = user_movie_recomendation_df.loc[[9],:]
     index_10 = user_movie_recomendation_df.loc[[10],:]
     st.write(index_1)
-    st.write(index_1[0]['영화이름'])
+    st.image(index_1[0]['img_url'])
     
