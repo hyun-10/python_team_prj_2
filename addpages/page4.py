@@ -169,8 +169,8 @@ def app():
     j=0
     for i in range(1,6):
         with col_list[j]:
-            
-            st.image('index_1_img_url')
+            a=1
+            st.image(f'index_{a}_img_url')
             st.write('index_1_movieNm')
             st.write('index_1_gene')
             st.write('index_1_directors')
