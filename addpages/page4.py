@@ -167,7 +167,7 @@ def app():
     col_list=[col1,col2,col3,col4,col5]
 
     j=0
-    for i in range(1,6):
+    for i in range(5):
         with col_list[j]:
             
             st.image(index_1_img_url)
