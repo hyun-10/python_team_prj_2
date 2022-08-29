@@ -10,7 +10,7 @@ def app():
   cursor.execute(quary_string)
   
   col1, col2, col3= st.columns(3,gap="small")
-  col_list=[col1, col2, col4, col5, col6, col7, col8, col9, col0]
+  col_list=[col1, col2,col3]
   j=0
   for peopleCd, peopleNmEn ,repRoleNm, peopleNm ,imgURL ,filmoNames,peopleNm  in cursor:
       if imgURL != 'https://ssl.pstatic.net/static/movie/2012/06/dft_img120x150.png' and imgURL != 'https://ssl.pstatic.net/static/movie/2012/06/dft_img77x96_1.png':
