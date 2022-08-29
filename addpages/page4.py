@@ -10,6 +10,7 @@ import numpy as np
 import sqlite3
 
 def app():
+  st.write('영화추천')
   #genre_='fantasy'
   genre_ = st.selectbox('장르를 선택하세요',('action','adult','adventure','animation','comedy','crime','documentary','drama','etc','family','fantasy','fear','history','melo','musical','mystery','thriller','war','western'))
   genre_ = genre_
