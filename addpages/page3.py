@@ -11,15 +11,15 @@ def app():
   
   col1, col2, col3= st.columns(3,gap="small")
   for peopleCd, peopleNmEn ,repRoleNm, peopleNm ,imgURL ,filmoNames,peopleNm  in cursor:
-      if peopleNmEn == None : 
-          st.write(peopleNm)
-      #else :
+      if peopleNmEn == None :
+          #st.write(peopleNm)
+          #else :
           #st.write(peopleNm, peopleNmEn)
-      with col1 :
-          st.image(imgURL,width=150,)
-      with col2 :
-          st.write(peopleNm,peopleNmEn)
-      with col3 :
-          st.write(filmoNames)
+          with col1 :
+              st.image(imgURL,width=150,)
+          with col2 :
+              st.write(peopleNm,peopleNmEn)
+          with col3 :
+              st.write(filmoNames)
 
       
