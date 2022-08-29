@@ -3,7 +3,7 @@ import sqlite3
 
 
 def app():
-  st.write('8/24일기준')
+  st.write('boxoffice 8/24일기준')
   connect = sqlite3.connect('db/1p/box.db', isolation_level=None)
   cursor = connect.cursor();
   
