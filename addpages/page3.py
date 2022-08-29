@@ -19,7 +19,7 @@ def app():
           #st.write(peopleNm, peopleNmEn)
           with col_list[j] :
               st.image(imgURL,width=150,)
-              st.image(imgURL,width=150,)
+              st.write(peopleNm,peopleNmEn)
               st.write(filmoNames)
           j+=1
 
