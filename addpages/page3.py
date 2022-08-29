@@ -21,8 +21,8 @@ def app():
               st.image(imgURL,width=150)
 
           with col_list[1] :
-              st.image('',width=150)
-              st.write(peopleNm,peopleNmEn,width=150)
+
+              st.write(peopleNm,peopleNmEn,height=900)
           with col_list[2] :
               st.write(filmoNames,width=150)
           j+=1
