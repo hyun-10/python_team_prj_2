@@ -68,7 +68,7 @@ def app():
   def get_review(query_code,movie_info,movie_reviews):
     select_movie = movie_info[movie_info['영화코드']==code]
     select_movie_review = pd.merge(select_movie, movie_reviews, left_on='영화코드', right_on='code', how='left')
-    st.write(select_movie_review)
+    st.write('확인용',select_movie_review)
     movie_ = select_movie_review[['영화코드',	'영화이름',	'제작년도',	'상영시간',	'제작상태',	'제작국가',	'장르',	'감독',	'배우',	'스탭수',	'img_url',	'code',	'movie',	'genre']].iloc[0]
     st.write(movie_)
     bool_review = select_movie_review['review']!=select_movie_review['review']
