@@ -18,6 +18,7 @@ def app():
           with col1 :
               st.image(imgURL,width=150,)
           with col2 :
+              st.write('')
               st.write(peopleNm,peopleNmEn)
               st.write('')
               st.write('')
@@ -29,6 +30,8 @@ def app():
               st.write('')
               st.write('')
               st.write('')
+              st.write('')
+
           with col3 :
               st.write(filmoNames)
 
