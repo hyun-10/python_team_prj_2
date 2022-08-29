@@ -10,7 +10,7 @@ def app():
   cursor.execute(quary_string)
   
   col1, col2, col3= st.columns(3)
-  st.expander = 
+ 
   
   col_list=[col1, col2,col3]
   j=0
