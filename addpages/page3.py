@@ -11,7 +11,7 @@ def app():
   
   col1, col2, col3= st.columns(3,gap="small")
   for peopleCd, peopleNmEn ,repRoleNm, peopleNm ,imgURL ,filmoNames,peopleNm  in cursor:
-      if peopleNmEn != None :
+      if imgURL != None :
           #st.write(peopleNm)
           #else :
           #st.write(peopleNm, peopleNmEn)
