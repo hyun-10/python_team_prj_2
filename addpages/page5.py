@@ -79,8 +79,8 @@ def app():
       st.write(len(select_movie_review['review']),'개의 리뷰가 있습니다.')
       select_movie_review = np.nan # 시각화하지않기 위한 장치
     else :
-      st.write(len(select_movie_review['review']),'개의 리뷰가 있습니다.')
-    st.write(select_movie_review)
+      st.write(len('확인용',select_movie_review['review'],'확인용끝'),'개의 리뷰가 있습니다.')
+    st.write('확인용',select_movie_review,'확인용')
     return   select_movie_review
 
   
