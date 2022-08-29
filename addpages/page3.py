@@ -13,7 +13,7 @@ def app():
   col_list=[col1, col2,col3]
   j=0
   for peopleCd, peopleNmEn ,repRoleNm, peopleNm ,imgURL ,filmoNames,peopleNm  in cursor:
-      if imgURL != 'https://ssl.pstatic.net/static/movie/2012/06/dft_img120x150.png' and :
+      if imgURL != 'https://ssl.pstatic.net/static/movie/2012/06/dft_img120x150.png' :
           #st.write(peopleNm)
           #else :
           #st.write(peopleNm, peopleNmEn)
