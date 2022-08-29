@@ -11,7 +11,7 @@ def app():
   
   col1, col2, col3= st.columns(3,gap="small")
   for peopleCd, peopleNmEn ,repRoleNm, peopleNm ,imgURL ,filmoNames,peopleNm  in cursor:
-      if imgURL != 'https://ssl.pstatic.net/static/movie/2012/06/dft_img120x150.png',imgURL !='https://ssl.pstatic.net/static/movie/2012/06/dft_img77x96_1.png' :
+      if imgURL in != 'https://ssl.pstatic.net/' :
           #st.write(peopleNm)
           #else :
           #st.write(peopleNm, peopleNmEn)
