@@ -4,7 +4,7 @@ import sqlite3
 
 
 def app():
-  st.write('영화정보 조회')
+  st.subheader('영화정보 조회')
   connect = sqlite3.connect('db/2p/movie.db', isolation_level=None)
   cursor = connect.cursor()
     
