@@ -16,17 +16,17 @@ def app():
   col_list=[col1, col2,col3]
   j=0
   for peopleCd, peopleNmEn ,repRoleNm, peopleNm ,imgURL ,filmoNames,peopleNm  in cursor:
-      if peopleNmEn != None :
+      #if peopleNmEn != None :
           #st.write(peopleNm)
           #else :
           #st.write(peopleNm, peopleNmEn)
-          with col_list[0] :
-              st.image(imgURL,width=150)
-              st.write(peopleNm,peopleNmEn)
-              st.write(filmoNames)
+      with col_list[0] :
+          st.image(imgURL,width=150)
+          st.write(peopleNm)
+          st.write(filmoNames)
 
 
-          j+=1
+      j+=1
 
               
 
