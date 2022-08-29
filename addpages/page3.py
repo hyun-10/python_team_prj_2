@@ -22,10 +22,10 @@ def app():
 
     
           with col_list[1] :
-              st.write(peopleNm,peopleNmEn,use_column_width=True)
+              st.write(peopleNm,peopleNmEn,use_column_width=800)
 
           with col_list[2] :
-              st.write(filmoNames,use_column_width=True)
+              st.write(filmoNames,use_column_width=800)
 
           j+=1
 
