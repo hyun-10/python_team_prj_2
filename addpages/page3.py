@@ -10,6 +10,7 @@ def app():
   cursor.execute(quary_string)
   
   col1, col2, col3= st.columns(3)
+  my_expander = st.expander()
   col_list=[col1, col2,col3]
   j=0
   for peopleCd, peopleNmEn ,repRoleNm, peopleNm ,imgURL ,filmoNames,peopleNm  in cursor:
@@ -18,14 +19,14 @@ def app():
           #else :
           #st.write(peopleNm, peopleNmEn)
           with col_list[0] :
-              st.image(imgURL,width=150)
+              my_expander.image(imgURL,width=150)
 
     
           with col_list[1] :
-              st.write(peopleNm,peopleNmEn,use_column_width=800)
+              my_expander.write(peopleNm,peopleNmEn,use_column_width=800)
 
           with col_list[2] :
-              st.write(filmoNames,use_column_width=800)
+              my_expander.write(filmoNames,use_column_width=800)
 
           j+=1
 
