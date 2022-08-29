@@ -18,7 +18,7 @@ def app():
           #else :
           #st.write(peopleNm, peopleNmEn)
           with col_list[0] :
-              st.image(imgURL,width=150)
+              st.image(imgURL,width=100)
 
           with col_list[1] :
               st.write(peopleNm,peopleNmEn,width=150)
