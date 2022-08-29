@@ -18,7 +18,7 @@ def app():
   puid = st.text_input('ID(adiv)', key=1)
                     
 
-  punick = st.text_input('Nickname()',key=2)
+  punick = st.text_input('Nickname(푸른불)',key=2)
   if punick:
     puid=puid[0:4]+'****'
 
