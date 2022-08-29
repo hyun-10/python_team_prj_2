@@ -19,12 +19,11 @@ def app():
           #st.write(peopleNm, peopleNmEn)
           with col_list[j] :
               st.image(imgURL,width=150,)
+
+          with col_list[j+1] :
               st.write(peopleNm,peopleNmEn)
+          with col_list[j+2] :
               st.write(filmoNames)
-          #with col_list[j] :
-              #st.write(peopleNm,peopleNmEn)
-          #with col_list[j] :
-              #st.write(filmoNames)
           j+=1
 
               
