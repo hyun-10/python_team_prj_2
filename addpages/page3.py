@@ -24,6 +24,11 @@ def app():
               st.write('')
               st.write('')
               st.write('')
+              st.write('')
+              st.write('')
+              st.write('')
+              st.write('')
+              st.write('')
           with col3 :
               st.write(filmoNames)
 
