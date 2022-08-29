@@ -1,9 +1,10 @@
 import streamlit as st
 import sqlite3
-st.write('영화정보 조회')
+
 
 
 def app():
+  st.write('영화정보 조회')
   connect = sqlite3.connect('db/2p/movie.db', isolation_level=None)
   cursor = connect.cursor()
     
