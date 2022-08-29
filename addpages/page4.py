@@ -15,10 +15,10 @@ def app():
   genre_ = st.selectbox('장르를 선택하세요',('action','adult','adventure','animation','comedy','crime','documentary','drama','etc','family','fantasy','fear','history','melo','musical','mystery','thriller','war','western'))
   genre_ = genre_
 
-  puid = st.text_input('ID', key=1)
+  puid = st.text_input('ID(adiv)', key=1)
                     
 
-  punick = st.text_input('Nickname',key=2)
+  punick = st.text_input('Nickname()',key=2)
   if punick:
     puid=puid[0:4]+'****'
 
