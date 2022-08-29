@@ -9,7 +9,7 @@ def app():
   quary_string = f"select peopleCd, peopleNmEn ,repRoleNm, peopleNm ,imgURL ,filmoNames ,peopleNm from movie_people_included_imgURL where peopleNm in ('{input}')"
   cursor.execute(quary_string)
   
-  col1, col2, col3= st.columns((2,2,2))
+  col1, col2, col3= st.columns(3)
   col_list=[col1, col2,col3]
   j=0
   for peopleCd, peopleNmEn ,repRoleNm, peopleNm ,imgURL ,filmoNames,peopleNm  in cursor:
@@ -18,14 +18,14 @@ def app():
           #else :
           #st.write(peopleNm, peopleNmEn)
           with col_list[0] :
-              st.image(imgURL,width=150)
+              st.image(imgURL,use_column_width=True)
 
     
           with col_list[1] :
-              st.write(peopleNm,peopleNmEn)
+              st.write(peopleNm,peopleNmEn,use_column_width=True)
 
           with col_list[2] :
-              st.write(filmoNames)
+              st.write(filmoNames,use_column_width=True)
 
           j+=1
 
